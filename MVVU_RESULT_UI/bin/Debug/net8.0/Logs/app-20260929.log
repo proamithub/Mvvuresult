@@ -1,0 +1,389 @@
+2026-09-29 14:47:32.724 +05:30 [INF] Now listening on: https://localhost:7142
+2026-09-29 14:47:32.770 +05:30 [INF] Now listening on: http://localhost:5288
+2026-09-29 14:47:32.821 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-29 14:47:32.821 +05:30 [INF] Hosting environment: Development
+2026-09-29 14:47:32.821 +05:30 [INF] Content root path: D:\MVVU_RESULT\MVVU_RESULT_UI
+2026-09-29 14:47:36.391 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/ - null null
+2026-09-29 14:47:36.745 +05:30 [INF] Executing endpoint 'MVVU_RESULT_UI.Controllers.HomeController.Index (MVVU_RESULT_UI)'
+2026-09-29 14:47:36.782 +05:30 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller MVVU_RESULT_UI.Controllers.HomeController (MVVU_RESULT_UI).
+2026-09-29 14:47:38.594 +05:30 [INF] Executing ViewResult, running view Index.
+2026-09-29 14:47:38.822 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/css/site.css?v=_8KY71QIOib5rU42ypV_5I4r_oumJ3BvCatiUPXxyhY - null null
+2026-09-29 14:47:38.836 +05:30 [INF] The file /css/site.css was not modified
+2026-09-29 14:47:38.839 +05:30 [INF] Executed ViewResult - view Index executed in 250.2343ms.
+2026-09-29 14:47:38.841 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/css/site.css?v=_8KY71QIOib5rU42ypV_5I4r_oumJ3BvCatiUPXxyhY - 304 null text/css 19.6305ms
+2026-09-29 14:47:38.845 +05:30 [INF] Executed action MVVU_RESULT_UI.Controllers.HomeController.Index (MVVU_RESULT_UI) in 2060.1462ms
+2026-09-29 14:47:38.846 +05:30 [INF] Executed endpoint 'MVVU_RESULT_UI.Controllers.HomeController.Index (MVVU_RESULT_UI)'
+2026-09-29 14:47:38.849 +05:30 [INF] HTTP GET / responded 200 in 2104.5690 ms
+2026-09-29 14:47:38.860 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/ - 200 null text/html; charset=utf-8 2486.1993ms
+2026-09-29 14:47:38.875 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-29 14:47:38.876 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2026-09-29 14:47:38.884 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 10.1289ms
+2026-09-29 14:47:38.892 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/images/home-bg.webp - null null
+2026-09-29 14:47:38.906 +05:30 [INF] HTTP GET /images/home-bg.webp responded 404 in 0.2193 ms
+2026-09-29 14:47:38.906 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/images/home-bg.webp - 404 0 null 15.0465ms
+2026-09-29 14:47:38.908 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7142/images/home-bg.webp, Response status code: 404
+2026-09-29 14:47:38.961 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/logo_header - bg.png - null null
+2026-09-29 14:47:38.966 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 90.2989ms
+2026-09-29 14:47:38.969 +05:30 [INF] HTTP GET /logo_header - bg.png responded 404 in 0.0283 ms
+2026-09-29 14:47:38.969 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/logo_header - bg.png - 404 0 null 9.2153ms
+2026-09-29 14:47:38.969 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7142/logo_header%20-%20bg.png, Response status code: 404
+2026-09-29 14:47:39.122 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7142/Themes/vendors/scripts/bootstrap-select.min.js.map - null null
+2026-09-29 14:47:39.123 +05:30 [INF] HTTP GET /Themes/vendors/scripts/bootstrap-select.min.js.map responded 404 in 0.0418 ms
+2026-09-29 14:47:39.125 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7142/Themes/vendors/scripts/bootstrap-select.min.js.map - 404 0 null 3.3098ms
+2026-09-29 14:47:39.125 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7142/Themes/vendors/scripts/bootstrap-select.min.js.map, Response status code: 404
+2026-09-29 14:47:39.142 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/Themes/vendors/scripts/bootstrap-select.min.js.map - null null
+2026-09-29 14:47:39.143 +05:30 [INF] HTTP GET /Themes/vendors/scripts/bootstrap-select.min.js.map responded 404 in 0.0196 ms
+2026-09-29 14:47:39.143 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/Themes/vendors/scripts/bootstrap-select.min.js.map - 404 0 null 1.7761ms
+2026-09-29 14:47:39.144 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7142/Themes/vendors/scripts/bootstrap-select.min.js.map, Response status code: 404
+2026-09-29 14:47:41.924 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/admin/login - null null
+2026-09-29 14:47:41.934 +05:30 [INF] Executing endpoint 'MVVU_RESULT_UI.Areas.Admin.Controllers.AccountController.Login (MVVU_RESULT_UI)'
+2026-09-29 14:47:41.943 +05:30 [INF] Route matched with {area = "Admin", action = "Login", controller = "Account", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(System.String) on controller MVVU_RESULT_UI.Areas.Admin.Controllers.AccountController (MVVU_RESULT_UI).
+2026-09-29 14:47:41.985 +05:30 [INF] Executing ViewResult, running view Login.
+2026-09-29 14:47:42.144 +05:30 [INF] Executed ViewResult - view Login executed in 162.13ms.
+2026-09-29 14:47:42.145 +05:30 [INF] Executed action MVVU_RESULT_UI.Areas.Admin.Controllers.AccountController.Login (MVVU_RESULT_UI) in 202.1798ms
+2026-09-29 14:47:42.146 +05:30 [INF] Executed endpoint 'MVVU_RESULT_UI.Areas.Admin.Controllers.AccountController.Login (MVVU_RESULT_UI)'
+2026-09-29 14:47:42.146 +05:30 [INF] HTTP GET /admin/login responded 200 in 212.4258 ms
+2026-09-29 14:47:42.147 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/admin/login - 200 null text/html; charset=utf-8 223.365ms
+2026-09-29 14:47:42.166 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-29 14:47:42.170 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 4.8004ms
+2026-09-29 14:47:42.177 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2026-09-29 14:47:42.202 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 24.8261ms
+2026-09-29 14:47:42.267 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7142/pageui/plugins/bootstrap/js/bootstrap.bundle.min.js.map - null null
+2026-09-29 14:47:42.269 +05:30 [INF] HTTP GET /pageui/plugins/bootstrap/js/bootstrap.bundle.min.js.map responded 404 in 0.5756 ms
+2026-09-29 14:47:42.271 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7142/pageui/plugins/bootstrap/js/bootstrap.bundle.min.js.map - 404 0 null 3.9353ms
+2026-09-29 14:47:42.271 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7142/pageui/plugins/bootstrap/js/bootstrap.bundle.min.js.map, Response status code: 404
+2026-09-29 14:47:42.299 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/pageui/plugins/bootstrap/js/bootstrap.bundle.min.js.map - null null
+2026-09-29 14:47:42.301 +05:30 [INF] HTTP GET /pageui/plugins/bootstrap/js/bootstrap.bundle.min.js.map responded 404 in 0.0180 ms
+2026-09-29 14:47:42.301 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/pageui/plugins/bootstrap/js/bootstrap.bundle.min.js.map - 404 0 null 2.0184ms
+2026-09-29 14:47:42.301 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7142/pageui/plugins/bootstrap/js/bootstrap.bundle.min.js.map, Response status code: 404
+2026-09-29 14:47:43.947 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7142/admin/login - application/json; charset=UTF-8 37
+2026-09-29 14:47:43.954 +05:30 [INF] CORS policy execution successful.
+2026-09-29 14:47:43.961 +05:30 [INF] Executing endpoint 'MVVU_RESULT_UI.Areas.Admin.Controllers.AccountController.Login (MVVU_RESULT_UI)'
+2026-09-29 14:47:43.965 +05:30 [INF] Route matched with {area = "Admin", action = "Login", controller = "Account", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(MVVU_RESULT_MODEL.DTO.LoginDTO, System.String) on controller MVVU_RESULT_UI.Areas.Admin.Controllers.AccountController (MVVU_RESULT_UI).
+2026-09-29 14:47:44.807 +05:30 [WRN] No store type was specified for the decimal property 'Sequence' on entity type 'NewMasters'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-29 14:47:46.374 +05:30 [INF] Executed DbCommand (123ms) [Parameters=[@__admin_AdminId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[RoleName]
+FROM [Roles] AS [r]
+INNER JOIN [AdminMasterRoles] AS [a] ON [r].[RoleId] = [a].[RoleId]
+WHERE [a].[AdminId] = @__admin_AdminId_0
+2026-09-29 14:47:46.504 +05:30 [INF] AuthenticationScheme: Cookies signed in.
+2026-09-29 14:47:46.611 +05:30 [INF] Executing JsonResult, writing value of type 'System.String'.
+2026-09-29 14:47:46.614 +05:30 [INF] Executed action MVVU_RESULT_UI.Areas.Admin.Controllers.AccountController.Login (MVVU_RESULT_UI) in 2648.7689ms
+2026-09-29 14:47:46.614 +05:30 [INF] Executed endpoint 'MVVU_RESULT_UI.Areas.Admin.Controllers.AccountController.Login (MVVU_RESULT_UI)'
+2026-09-29 14:47:46.614 +05:30 [INF] HTTP POST /admin/login responded 200 in 2652.7744 ms
+2026-09-29 14:47:46.621 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7142/admin/login - 200 null application/json; charset=utf-8 2673.5673ms
+2026-09-29 14:47:46.627 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/admin/dashboard - null null
+2026-09-29 14:47:46.637 +05:30 [INF] Executing endpoint 'MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.Index (MVVU_RESULT_UI)'
+2026-09-29 14:47:46.644 +05:30 [INF] Route matched with {area = "Admin", action = "Index", controller = "Dashboard", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController (MVVU_RESULT_UI).
+2026-09-29 14:47:46.678 +05:30 [INF] Executing ViewResult, running view Index.
+2026-09-29 14:47:46.745 +05:30 [INF] Executed ViewResult - view Index executed in 68.0035ms.
+2026-09-29 14:47:46.746 +05:30 [INF] Executed action MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.Index (MVVU_RESULT_UI) in 102.2051ms
+2026-09-29 14:47:46.747 +05:30 [INF] Executed endpoint 'MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.Index (MVVU_RESULT_UI)'
+2026-09-29 14:47:46.747 +05:30 [INF] HTTP GET /admin/dashboard responded 200 in 110.0607 ms
+2026-09-29 14:47:46.747 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/admin/dashboard - 200 null text/html; charset=utf-8 119.7921ms
+2026-09-29 14:47:46.793 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-29 14:47:46.795 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2026-09-29 14:47:46.795 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 2.878ms
+2026-09-29 14:47:46.815 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.0602ms
+2026-09-29 14:47:46.849 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7142/pageui/plugins/moment/moment.min.js.map - null null
+2026-09-29 14:47:46.850 +05:30 [INF] HTTP GET /pageui/plugins/moment/moment.min.js.map responded 404 in 0.0231 ms
+2026-09-29 14:47:46.850 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7142/pageui/plugins/moment/moment.min.js.map - 404 0 null 1.3126ms
+2026-09-29 14:47:46.851 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7142/pageui/plugins/moment/moment.min.js.map, Response status code: 404
+2026-09-29 14:47:46.856 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/pageui/plugins/moment/moment.min.js.map - null null
+2026-09-29 14:47:46.857 +05:30 [INF] HTTP GET /pageui/plugins/moment/moment.min.js.map responded 404 in 0.0183 ms
+2026-09-29 14:47:46.857 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/pageui/plugins/moment/moment.min.js.map - 404 0 null 1.6122ms
+2026-09-29 14:47:46.858 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7142/pageui/plugins/moment/moment.min.js.map, Response status code: 404
+2026-09-29 14:47:46.909 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7142/pageui/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js.map - null null
+2026-09-29 14:47:46.909 +05:30 [INF] HTTP GET /pageui/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js.map responded 404 in 0.0163 ms
+2026-09-29 14:47:46.909 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7142/pageui/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js.map - 404 0 null 0.8677ms
+2026-09-29 14:47:46.909 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7142/pageui/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js.map, Response status code: 404
+2026-09-29 14:47:46.919 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/pageui/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js.map - null null
+2026-09-29 14:47:46.920 +05:30 [INF] HTTP GET /pageui/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js.map responded 404 in 0.0088 ms
+2026-09-29 14:47:46.920 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/pageui/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js.map - 404 0 null 1.3043ms
+2026-09-29 14:47:46.920 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7142/pageui/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js.map, Response status code: 404
+2026-09-29 14:47:47.019 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7142/pageui/plugins/toastr/toastr.js.map - null null
+2026-09-29 14:47:47.020 +05:30 [INF] HTTP GET /pageui/plugins/toastr/toastr.js.map responded 404 in 0.0128 ms
+2026-09-29 14:47:47.020 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7142/pageui/plugins/toastr/toastr.js.map - 404 0 null 0.7721ms
+2026-09-29 14:47:47.020 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7142/pageui/plugins/toastr/toastr.js.map, Response status code: 404
+2026-09-29 14:47:47.026 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/pageui/plugins/toastr/toastr.js.map - null null
+2026-09-29 14:47:47.027 +05:30 [INF] HTTP GET /pageui/plugins/toastr/toastr.js.map responded 404 in 0.0131 ms
+2026-09-29 14:47:47.027 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/pageui/plugins/toastr/toastr.js.map - 404 0 null 1.3709ms
+2026-09-29 14:47:47.027 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7142/pageui/plugins/toastr/toastr.js.map, Response status code: 404
+2026-09-29 14:47:48.595 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/Admin/Dashboard/CheckResultData?RollNumber=2510255010001 - null null
+2026-09-29 14:47:48.605 +05:30 [INF] Executing endpoint 'MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.CheckResultData (MVVU_RESULT_UI)'
+2026-09-29 14:47:48.609 +05:30 [INF] Route matched with {area = "Admin", action = "CheckResultData", controller = "Dashboard", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CheckResultData(System.String) on controller MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController (MVVU_RESULT_UI).
+2026-09-29 14:47:48.661 +05:30 [INF] Executing PartialViewResult, running view _PageData.
+2026-09-29 14:47:48.681 +05:30 [INF] Executed PartialViewResult - view _PageData executed in 20.6953ms.
+2026-09-29 14:47:48.681 +05:30 [INF] Executed action MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.CheckResultData (MVVU_RESULT_UI) in 72.2539ms
+2026-09-29 14:47:48.681 +05:30 [INF] Executed endpoint 'MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.CheckResultData (MVVU_RESULT_UI)'
+2026-09-29 14:47:48.681 +05:30 [INF] HTTP GET /Admin/Dashboard/CheckResultData responded 200 in 75.7995 ms
+2026-09-29 14:47:48.681 +05:30 [WRN] Unable to configure Browser Link script injection on the response. 
+2026-09-29 14:47:48.682 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/Admin/Dashboard/CheckResultData?RollNumber=2510255010001 - 200 null text/html; charset=utf-8 86.7134ms
+2026-09-29 14:47:56.972 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/admin/dashboard/coursemasterrule - null null
+2026-09-29 14:47:57.001 +05:30 [INF] Executing endpoint 'MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.CourseMasterRule (MVVU_RESULT_UI)'
+2026-09-29 14:47:57.007 +05:30 [INF] Route matched with {area = "Admin", action = "CourseMasterRule", controller = "Dashboard", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CourseMasterRule() on controller MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController (MVVU_RESULT_UI).
+2026-09-29 14:47:57.121 +05:30 [INF] Executing ViewResult, running view CourseMasterRule.
+2026-09-29 14:47:57.403 +05:30 [INF] Executed ViewResult - view CourseMasterRule executed in 282.3548ms.
+2026-09-29 14:47:57.403 +05:30 [INF] Executed action MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.CourseMasterRule (MVVU_RESULT_UI) in 396.194ms
+2026-09-29 14:47:57.403 +05:30 [INF] Executed endpoint 'MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.CourseMasterRule (MVVU_RESULT_UI)'
+2026-09-29 14:47:57.403 +05:30 [INF] HTTP GET /admin/dashboard/coursemasterrule responded 200 in 402.2485 ms
+2026-09-29 14:47:57.403 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/admin/dashboard/coursemasterrule - 200 null text/html; charset=utf-8 431.4554ms
+2026-09-29 14:47:57.489 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-29 14:47:57.491 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 2.0671ms
+2026-09-29 14:47:57.504 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2026-09-29 14:47:57.521 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.6996ms
+2026-09-29 14:48:00.245 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7142/admin/dashboard/coursemasterrule - application/x-www-form-urlencoded 302
+2026-09-29 14:48:00.248 +05:30 [INF] CORS policy execution successful.
+2026-09-29 14:48:00.248 +05:30 [INF] Executing endpoint 'MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.CourseMasterRule (MVVU_RESULT_UI)'
+2026-09-29 14:48:00.254 +05:30 [INF] Route matched with {area = "Admin", action = "CourseMasterRule", controller = "Dashboard", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CourseMasterRule(Boolean, System.String, System.String) on controller MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController (MVVU_RESULT_UI).
+2026-09-29 14:48:00.385 +05:30 [INF] Executing ViewResult, running view CourseMasterRule.
+2026-09-29 14:48:00.482 +05:30 [INF] Executed ViewResult - view CourseMasterRule executed in 96.4884ms.
+2026-09-29 14:48:00.482 +05:30 [INF] Executed action MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.CourseMasterRule (MVVU_RESULT_UI) in 228.1549ms
+2026-09-29 14:48:00.482 +05:30 [INF] Executed endpoint 'MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.CourseMasterRule (MVVU_RESULT_UI)'
+2026-09-29 14:48:00.482 +05:30 [INF] HTTP POST /admin/dashboard/coursemasterrule responded 200 in 233.8720 ms
+2026-09-29 14:48:00.482 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7142/admin/dashboard/coursemasterrule - 200 null text/html; charset=utf-8 238.1737ms
+2026-09-29 14:48:00.504 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-29 14:48:00.505 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2026-09-29 14:48:00.506 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 2.0563ms
+2026-09-29 14:48:00.530 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 25.8396ms
+2026-09-29 14:48:06.344 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7142/admin/dashboard/coursemasterrule - application/x-www-form-urlencoded 271
+2026-09-29 14:48:06.347 +05:30 [INF] CORS policy execution successful.
+2026-09-29 14:48:06.347 +05:30 [INF] Executing endpoint 'MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.CourseMasterRule (MVVU_RESULT_UI)'
+2026-09-29 14:48:06.347 +05:30 [INF] Route matched with {area = "Admin", action = "CourseMasterRule", controller = "Dashboard", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CourseMasterRule(Boolean, System.String, System.String) on controller MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController (MVVU_RESULT_UI).
+2026-09-29 14:48:06.405 +05:30 [INF] Executing ViewResult, running view CourseMasterRule.
+2026-09-29 14:48:06.503 +05:30 [INF] Executed ViewResult - view CourseMasterRule executed in 97.7901ms.
+2026-09-29 14:48:06.503 +05:30 [INF] Executed action MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.CourseMasterRule (MVVU_RESULT_UI) in 155.3234ms
+2026-09-29 14:48:06.503 +05:30 [INF] Executed endpoint 'MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.CourseMasterRule (MVVU_RESULT_UI)'
+2026-09-29 14:48:06.503 +05:30 [INF] HTTP POST /admin/dashboard/coursemasterrule responded 200 in 155.6125 ms
+2026-09-29 14:48:06.503 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7142/admin/dashboard/coursemasterrule - 200 null text/html; charset=utf-8 158.9749ms
+2026-09-29 14:48:06.513 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-29 14:48:06.513 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2026-09-29 14:48:06.515 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 2.0722ms
+2026-09-29 14:48:06.538 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 25.1119ms
+2026-09-29 14:48:45.221 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/resultpreview/TUFTVEVSIE9GIFNDSUVOQ0UgKEFHUklDVUxUVVJFKShBRy4gRVhURU5TSU9OIEVEVUNBVElPTikgLSBJIFNFTUVTVEVSJDI1MTAyNTUwMTAwMDEkQWZmaWxpYXRlZCBDb2xsZWdlJFJFR1VMQVIkMjAyNS0yNiRERUMtMjAyNSQx - null null
+2026-09-29 14:48:45.225 +05:30 [INF] Executing endpoint 'MVVU_RESULT_UI.Controllers.HomeController.ResultPreview (MVVU_RESULT_UI)'
+2026-09-29 14:48:45.230 +05:30 [INF] Route matched with {action = "ResultPreview", controller = "Home", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ResultPreview(System.String) on controller MVVU_RESULT_UI.Controllers.HomeController (MVVU_RESULT_UI).
+2026-09-29 14:48:45.246 +05:30 [INF] Executing RedirectResult, redirecting to /result/MjUxMDI1NTAxMDAwMQ%3D%3D.
+2026-09-29 14:48:45.246 +05:30 [INF] Executed action MVVU_RESULT_UI.Controllers.HomeController.ResultPreview (MVVU_RESULT_UI) in 15.8824ms
+2026-09-29 14:48:45.246 +05:30 [INF] Executed endpoint 'MVVU_RESULT_UI.Controllers.HomeController.ResultPreview (MVVU_RESULT_UI)'
+2026-09-29 14:48:45.246 +05:30 [INF] HTTP GET /resultpreview/TUFTVEVSIE9GIFNDSUVOQ0UgKEFHUklDVUxUVVJFKShBRy4gRVhURU5TSU9OIEVEVUNBVElPTikgLSBJIFNFTUVTVEVSJDI1MTAyNTUwMTAwMDEkQWZmaWxpYXRlZCBDb2xsZWdlJFJFR1VMQVIkMjAyNS0yNiRERUMtMjAyNSQx responded 302 in 21.3423 ms
+2026-09-29 14:48:45.247 +05:30 [INF] Session started; Key:7b83754c-49d0-631b-65f0-8c2c1ec16b40, Id:a4ccadf3-d49d-9030-c0d1-d3b3d295005d
+2026-09-29 14:48:45.248 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/resultpreview/TUFTVEVSIE9GIFNDSUVOQ0UgKEFHUklDVUxUVVJFKShBRy4gRVhURU5TSU9OIEVEVUNBVElPTikgLSBJIFNFTUVTVEVSJDI1MTAyNTUwMTAwMDEkQWZmaWxpYXRlZCBDb2xsZWdlJFJFR1VMQVIkMjAyNS0yNiRERUMtMjAyNSQx - 302 null null 28.1158ms
+2026-09-29 14:48:45.254 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/result/MjUxMDI1NTAxMDAwMQ== - null null
+2026-09-29 14:48:45.258 +05:30 [INF] Executing endpoint 'MVVU_RESULT_UI.Controllers.HomeController.Result (MVVU_RESULT_UI)'
+2026-09-29 14:48:45.263 +05:30 [INF] Route matched with {action = "Result", controller = "Home", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Result(System.String) on controller MVVU_RESULT_UI.Controllers.HomeController (MVVU_RESULT_UI).
+2026-09-29 14:48:45.269 +05:30 [INF] Executing ViewResult, running view Result.
+2026-09-29 14:48:46.189 +05:30 [INF] Executed ViewResult - view Result executed in 920.8946ms.
+2026-09-29 14:48:46.189 +05:30 [INF] Executed action MVVU_RESULT_UI.Controllers.HomeController.Result (MVVU_RESULT_UI) in 925.4554ms
+2026-09-29 14:48:46.189 +05:30 [INF] Executed endpoint 'MVVU_RESULT_UI.Controllers.HomeController.Result (MVVU_RESULT_UI)'
+2026-09-29 14:48:46.189 +05:30 [INF] HTTP GET /result/MjUxMDI1NTAxMDAwMQ== responded 200 in 930.9651 ms
+2026-09-29 14:48:46.189 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/result/MjUxMDI1NTAxMDAwMQ== - 200 null text/html; charset=utf-8 935.2278ms
+2026-09-29 14:48:46.214 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-29 14:48:46.216 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 1.7075ms
+2026-09-29 14:48:46.216 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2026-09-29 14:48:46.231 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.6308ms
+2026-09-29 14:48:46.404 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7142/Home/VisitCountSet - application/json; charset=UTF-8 171
+2026-09-29 14:48:46.405 +05:30 [INF] CORS policy execution successful.
+2026-09-29 14:48:46.406 +05:30 [INF] Executing endpoint 'MVVU_RESULT_UI.Controllers.HomeController.VisitCountSet (MVVU_RESULT_UI)'
+2026-09-29 14:48:46.412 +05:30 [INF] Route matched with {action = "VisitCountSet", controller = "Home", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] VisitCountSet(MVVU_RESULT_MODEL.DTO.StudentMasterDTOCount) on controller MVVU_RESULT_UI.Controllers.HomeController (MVVU_RESULT_UI).
+2026-09-29 14:48:46.519 +05:30 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-09-29 14:48:46.524 +05:30 [INF] Executed action MVVU_RESULT_UI.Controllers.HomeController.VisitCountSet (MVVU_RESULT_UI) in 111.27ms
+2026-09-29 14:48:46.524 +05:30 [INF] Executed endpoint 'MVVU_RESULT_UI.Controllers.HomeController.VisitCountSet (MVVU_RESULT_UI)'
+2026-09-29 14:48:46.524 +05:30 [INF] HTTP POST /Home/VisitCountSet responded 200 in 118.0573 ms
+2026-09-29 14:48:46.524 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7142/Home/VisitCountSet - 200 null application/json; charset=utf-8 120.4523ms
+2026-09-29 14:49:06.978 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/result/MjUxMDI1NTAxMDAwMQ== - null null
+2026-09-29 14:49:06.981 +05:30 [INF] Executing endpoint 'MVVU_RESULT_UI.Controllers.HomeController.Result (MVVU_RESULT_UI)'
+2026-09-29 14:49:06.986 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/admin/dashboard - null null
+2026-09-29 14:49:06.989 +05:30 [INF] Route matched with {action = "Result", controller = "Home", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Result(System.String) on controller MVVU_RESULT_UI.Controllers.HomeController (MVVU_RESULT_UI).
+2026-09-29 14:49:06.991 +05:30 [INF] Executing endpoint 'MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.Index (MVVU_RESULT_UI)'
+2026-09-29 14:49:06.994 +05:30 [INF] Executing ViewResult, running view Result.
+2026-09-29 14:49:06.994 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7142/admin/dashboard/coursemasterrule - application/x-www-form-urlencoded 271
+2026-09-29 14:49:06.998 +05:30 [INF] Route matched with {area = "Admin", action = "Index", controller = "Dashboard", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController (MVVU_RESULT_UI).
+2026-09-29 14:49:07.000 +05:30 [INF] CORS policy execution successful.
+2026-09-29 14:49:07.002 +05:30 [INF] Executing endpoint 'MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.CourseMasterRule (MVVU_RESULT_UI)'
+2026-09-29 14:49:07.005 +05:30 [INF] Executing ViewResult, running view Index.
+2026-09-29 14:49:07.011 +05:30 [INF] Route matched with {area = "Admin", action = "CourseMasterRule", controller = "Dashboard", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CourseMasterRule(Boolean, System.String, System.String) on controller MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController (MVVU_RESULT_UI).
+2026-09-29 14:49:07.018 +05:30 [INF] Executed ViewResult - view Index executed in 15.8127ms.
+2026-09-29 14:49:07.021 +05:30 [INF] Executed action MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.Index (MVVU_RESULT_UI) in 21.8675ms
+2026-09-29 14:49:07.023 +05:30 [INF] Executed endpoint 'MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.Index (MVVU_RESULT_UI)'
+2026-09-29 14:49:07.023 +05:30 [INF] HTTP GET /admin/dashboard responded 200 in 32.2187 ms
+2026-09-29 14:49:07.023 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/admin/dashboard - 200 null text/html; charset=utf-8 37.2581ms
+2026-09-29 14:49:07.036 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-29 14:49:07.036 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2026-09-29 14:49:07.038 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 1.8921ms
+2026-09-29 14:49:07.059 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.951ms
+2026-09-29 14:49:07.199 +05:30 [INF] Executed ViewResult - view Result executed in 207.53ms.
+2026-09-29 14:49:07.199 +05:30 [INF] Executed action MVVU_RESULT_UI.Controllers.HomeController.Result (MVVU_RESULT_UI) in 209.2115ms
+2026-09-29 14:49:07.199 +05:30 [INF] Executed endpoint 'MVVU_RESULT_UI.Controllers.HomeController.Result (MVVU_RESULT_UI)'
+2026-09-29 14:49:07.199 +05:30 [INF] HTTP GET /result/MjUxMDI1NTAxMDAwMQ== responded 200 in 217.6690 ms
+2026-09-29 14:49:07.199 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/result/MjUxMDI1NTAxMDAwMQ== - 200 null text/html; charset=utf-8 221.4528ms
+2026-09-29 14:49:07.220 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-29 14:49:07.220 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2026-09-29 14:49:07.222 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 1.8836ms
+2026-09-29 14:49:07.240 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.4604ms
+2026-09-29 14:49:07.300 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7142/Home/VisitCountSet - application/json; charset=UTF-8 171
+2026-09-29 14:49:07.302 +05:30 [INF] CORS policy execution successful.
+2026-09-29 14:49:07.302 +05:30 [INF] Executing endpoint 'MVVU_RESULT_UI.Controllers.HomeController.VisitCountSet (MVVU_RESULT_UI)'
+2026-09-29 14:49:07.310 +05:30 [INF] Route matched with {action = "VisitCountSet", controller = "Home", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] VisitCountSet(MVVU_RESULT_MODEL.DTO.StudentMasterDTOCount) on controller MVVU_RESULT_UI.Controllers.HomeController (MVVU_RESULT_UI).
+2026-09-29 14:49:07.333 +05:30 [INF] Executing ViewResult, running view CourseMasterRule.
+2026-09-29 14:49:07.386 +05:30 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-09-29 14:49:07.387 +05:30 [INF] Executed action MVVU_RESULT_UI.Controllers.HomeController.VisitCountSet (MVVU_RESULT_UI) in 77.7122ms
+2026-09-29 14:49:07.387 +05:30 [INF] Executed endpoint 'MVVU_RESULT_UI.Controllers.HomeController.VisitCountSet (MVVU_RESULT_UI)'
+2026-09-29 14:49:07.387 +05:30 [INF] HTTP POST /Home/VisitCountSet responded 200 in 85.2566 ms
+2026-09-29 14:49:07.388 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7142/Home/VisitCountSet - 200 null application/json; charset=utf-8 87.7688ms
+2026-09-29 14:49:07.411 +05:30 [INF] Executed ViewResult - view CourseMasterRule executed in 78.5726ms.
+2026-09-29 14:49:07.411 +05:30 [INF] Executed action MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.CourseMasterRule (MVVU_RESULT_UI) in 399.6485ms
+2026-09-29 14:49:07.411 +05:30 [INF] Executed endpoint 'MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.CourseMasterRule (MVVU_RESULT_UI)'
+2026-09-29 14:49:07.411 +05:30 [INF] HTTP POST /admin/dashboard/coursemasterrule responded 200 in 409.3205 ms
+2026-09-29 14:49:07.412 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7142/admin/dashboard/coursemasterrule - 200 null text/html; charset=utf-8 417.3177ms
+2026-09-29 14:49:07.489 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2026-09-29 14:49:07.489 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-29 14:49:07.491 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 1.5537ms
+2026-09-29 14:49:07.507 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.3203ms
+2026-09-29 14:49:13.580 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7142/admin/dashboard/coursemasterrule - application/x-www-form-urlencoded 271
+2026-09-29 14:49:13.584 +05:30 [INF] CORS policy execution successful.
+2026-09-29 14:49:13.584 +05:30 [INF] Executing endpoint 'MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.CourseMasterRule (MVVU_RESULT_UI)'
+2026-09-29 14:49:13.588 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/result/MjUxMDI1NTAxMDAwMQ== - null null
+2026-09-29 14:49:13.592 +05:30 [INF] Route matched with {area = "Admin", action = "CourseMasterRule", controller = "Dashboard", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CourseMasterRule(Boolean, System.String, System.String) on controller MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController (MVVU_RESULT_UI).
+2026-09-29 14:49:13.593 +05:30 [INF] Executing endpoint 'MVVU_RESULT_UI.Controllers.HomeController.Result (MVVU_RESULT_UI)'
+2026-09-29 14:49:13.598 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/admin/dashboard - null null
+2026-09-29 14:49:13.603 +05:30 [INF] Executing endpoint 'MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.Index (MVVU_RESULT_UI)'
+2026-09-29 14:49:13.604 +05:30 [INF] Route matched with {action = "Result", controller = "Home", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Result(System.String) on controller MVVU_RESULT_UI.Controllers.HomeController (MVVU_RESULT_UI).
+2026-09-29 14:49:13.607 +05:30 [INF] Route matched with {area = "Admin", action = "Index", controller = "Dashboard", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController (MVVU_RESULT_UI).
+2026-09-29 14:49:13.607 +05:30 [INF] Executing ViewResult, running view Result.
+2026-09-29 14:49:13.609 +05:30 [INF] Executing ViewResult, running view Index.
+2026-09-29 14:49:13.629 +05:30 [INF] Executed ViewResult - view Index executed in 20.9954ms.
+2026-09-29 14:49:13.630 +05:30 [INF] Executed action MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.Index (MVVU_RESULT_UI) in 23.0466ms
+2026-09-29 14:49:13.631 +05:30 [INF] Executed endpoint 'MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.Index (MVVU_RESULT_UI)'
+2026-09-29 14:49:13.631 +05:30 [INF] HTTP GET /admin/dashboard responded 200 in 28.0577 ms
+2026-09-29 14:49:13.632 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/admin/dashboard - 200 null text/html; charset=utf-8 33.7806ms
+2026-09-29 14:49:13.645 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-29 14:49:13.645 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2026-09-29 14:49:13.647 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 2.178ms
+2026-09-29 14:49:13.666 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.93ms
+2026-09-29 14:49:13.678 +05:30 [INF] Executing ViewResult, running view CourseMasterRule.
+2026-09-29 14:49:13.809 +05:30 [INF] Executed ViewResult - view Result executed in 203.0281ms.
+2026-09-29 14:49:13.809 +05:30 [INF] Executed action MVVU_RESULT_UI.Controllers.HomeController.Result (MVVU_RESULT_UI) in 204.4849ms
+2026-09-29 14:49:13.809 +05:30 [INF] Executed endpoint 'MVVU_RESULT_UI.Controllers.HomeController.Result (MVVU_RESULT_UI)'
+2026-09-29 14:49:13.809 +05:30 [INF] HTTP GET /result/MjUxMDI1NTAxMDAwMQ== responded 200 in 215.5971 ms
+2026-09-29 14:49:13.809 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/result/MjUxMDI1NTAxMDAwMQ== - 200 null text/html; charset=utf-8 220.7173ms
+2026-09-29 14:49:13.825 +05:30 [INF] Executed ViewResult - view CourseMasterRule executed in 147.5697ms.
+2026-09-29 14:49:13.825 +05:30 [INF] Executed action MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.CourseMasterRule (MVVU_RESULT_UI) in 232.3598ms
+2026-09-29 14:49:13.825 +05:30 [INF] Executed endpoint 'MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.CourseMasterRule (MVVU_RESULT_UI)'
+2026-09-29 14:49:13.825 +05:30 [INF] HTTP POST /admin/dashboard/coursemasterrule responded 200 in 240.7043 ms
+2026-09-29 14:49:13.825 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7142/admin/dashboard/coursemasterrule - 200 null text/html; charset=utf-8 245.5174ms
+2026-09-29 14:49:13.836 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2026-09-29 14:49:13.836 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-29 14:49:13.838 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 2.1844ms
+2026-09-29 14:49:13.865 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 29.5243ms
+2026-09-29 14:49:13.881 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-29 14:49:13.881 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2026-09-29 14:49:13.883 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 2.3018ms
+2026-09-29 14:49:13.893 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7142/Home/VisitCountSet - application/json; charset=UTF-8 171
+2026-09-29 14:49:13.896 +05:30 [INF] CORS policy execution successful.
+2026-09-29 14:49:13.897 +05:30 [INF] Executing endpoint 'MVVU_RESULT_UI.Controllers.HomeController.VisitCountSet (MVVU_RESULT_UI)'
+2026-09-29 14:49:13.904 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.9011ms
+2026-09-29 14:49:13.908 +05:30 [INF] Route matched with {action = "VisitCountSet", controller = "Home", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] VisitCountSet(MVVU_RESULT_MODEL.DTO.StudentMasterDTOCount) on controller MVVU_RESULT_UI.Controllers.HomeController (MVVU_RESULT_UI).
+2026-09-29 14:49:14.004 +05:30 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-09-29 14:49:14.005 +05:30 [INF] Executed action MVVU_RESULT_UI.Controllers.HomeController.VisitCountSet (MVVU_RESULT_UI) in 97.3846ms
+2026-09-29 14:49:14.005 +05:30 [INF] Executed endpoint 'MVVU_RESULT_UI.Controllers.HomeController.VisitCountSet (MVVU_RESULT_UI)'
+2026-09-29 14:49:14.005 +05:30 [INF] HTTP POST /Home/VisitCountSet responded 200 in 108.6829 ms
+2026-09-29 14:49:14.006 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7142/Home/VisitCountSet - 200 null application/json; charset=utf-8 112.4269ms
+2026-09-29 14:49:27.025 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/result/MjUxMDI1NTAxMDAwMQ== - null null
+2026-09-29 14:49:27.029 +05:30 [INF] Executing endpoint 'MVVU_RESULT_UI.Controllers.HomeController.Result (MVVU_RESULT_UI)'
+2026-09-29 14:49:27.031 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/admin/dashboard - null null
+2026-09-29 14:49:27.036 +05:30 [INF] Executing endpoint 'MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.Index (MVVU_RESULT_UI)'
+2026-09-29 14:49:27.036 +05:30 [INF] Route matched with {action = "Result", controller = "Home", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Result(System.String) on controller MVVU_RESULT_UI.Controllers.HomeController (MVVU_RESULT_UI).
+2026-09-29 14:49:27.038 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7142/admin/dashboard/coursemasterrule - application/x-www-form-urlencoded 271
+2026-09-29 14:49:27.040 +05:30 [INF] Executing ViewResult, running view Result.
+2026-09-29 14:49:27.043 +05:30 [INF] CORS policy execution successful.
+2026-09-29 14:49:27.043 +05:30 [INF] Route matched with {area = "Admin", action = "Index", controller = "Dashboard", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController (MVVU_RESULT_UI).
+2026-09-29 14:49:27.043 +05:30 [INF] Executing endpoint 'MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.CourseMasterRule (MVVU_RESULT_UI)'
+2026-09-29 14:49:27.045 +05:30 [INF] Executing ViewResult, running view Index.
+2026-09-29 14:49:27.055 +05:30 [INF] Route matched with {area = "Admin", action = "CourseMasterRule", controller = "Dashboard", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CourseMasterRule(Boolean, System.String, System.String) on controller MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController (MVVU_RESULT_UI).
+2026-09-29 14:49:27.062 +05:30 [INF] Executed ViewResult - view Index executed in 19.1652ms.
+2026-09-29 14:49:27.064 +05:30 [INF] Executed action MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.Index (MVVU_RESULT_UI) in 21.2054ms
+2026-09-29 14:49:27.065 +05:30 [INF] Executed endpoint 'MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.Index (MVVU_RESULT_UI)'
+2026-09-29 14:49:27.065 +05:30 [INF] HTTP GET /admin/dashboard responded 200 in 29.0332 ms
+2026-09-29 14:49:27.065 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/admin/dashboard - 200 null text/html; charset=utf-8 34.3704ms
+2026-09-29 14:49:27.076 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-29 14:49:27.077 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2026-09-29 14:49:27.078 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 2.0097ms
+2026-09-29 14:49:27.097 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.9716ms
+2026-09-29 14:49:27.164 +05:30 [INF] Executing ViewResult, running view CourseMasterRule.
+2026-09-29 14:49:27.245 +05:30 [INF] Executed ViewResult - view CourseMasterRule executed in 82.3699ms.
+2026-09-29 14:49:27.245 +05:30 [INF] Executed action MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.CourseMasterRule (MVVU_RESULT_UI) in 190.8433ms
+2026-09-29 14:49:27.245 +05:30 [INF] Executed endpoint 'MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.CourseMasterRule (MVVU_RESULT_UI)'
+2026-09-29 14:49:27.246 +05:30 [INF] HTTP POST /admin/dashboard/coursemasterrule responded 200 in 202.6087 ms
+2026-09-29 14:49:27.246 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7142/admin/dashboard/coursemasterrule - 200 null text/html; charset=utf-8 208.0174ms
+2026-09-29 14:49:27.326 +05:30 [INF] Executed ViewResult - view Result executed in 289.552ms.
+2026-09-29 14:49:27.326 +05:30 [INF] Executed action MVVU_RESULT_UI.Controllers.HomeController.Result (MVVU_RESULT_UI) in 290.398ms
+2026-09-29 14:49:27.326 +05:30 [INF] Executed endpoint 'MVVU_RESULT_UI.Controllers.HomeController.Result (MVVU_RESULT_UI)'
+2026-09-29 14:49:27.326 +05:30 [INF] HTTP GET /result/MjUxMDI1NTAxMDAwMQ== responded 200 in 297.8770 ms
+2026-09-29 14:49:27.327 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/result/MjUxMDI1NTAxMDAwMQ== - 200 null text/html; charset=utf-8 301.9403ms
+2026-09-29 14:49:27.332 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2026-09-29 14:49:27.336 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-29 14:49:27.339 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 7.9726ms
+2026-09-29 14:49:27.354 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.7504ms
+2026-09-29 14:49:27.391 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-29 14:49:27.391 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2026-09-29 14:49:27.392 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 2.0416ms
+2026-09-29 14:49:27.404 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7142/Home/VisitCountSet - application/json; charset=UTF-8 171
+2026-09-29 14:49:27.406 +05:30 [INF] CORS policy execution successful.
+2026-09-29 14:49:27.407 +05:30 [INF] Executing endpoint 'MVVU_RESULT_UI.Controllers.HomeController.VisitCountSet (MVVU_RESULT_UI)'
+2026-09-29 14:49:27.413 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.5826ms
+2026-09-29 14:49:27.417 +05:30 [INF] Route matched with {action = "VisitCountSet", controller = "Home", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] VisitCountSet(MVVU_RESULT_MODEL.DTO.StudentMasterDTOCount) on controller MVVU_RESULT_UI.Controllers.HomeController (MVVU_RESULT_UI).
+2026-09-29 14:49:27.500 +05:30 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-09-29 14:49:27.501 +05:30 [INF] Executed action MVVU_RESULT_UI.Controllers.HomeController.VisitCountSet (MVVU_RESULT_UI) in 83.7036ms
+2026-09-29 14:49:27.501 +05:30 [INF] Executed endpoint 'MVVU_RESULT_UI.Controllers.HomeController.VisitCountSet (MVVU_RESULT_UI)'
+2026-09-29 14:49:27.501 +05:30 [INF] HTTP POST /Home/VisitCountSet responded 200 in 94.3110 ms
+2026-09-29 14:49:27.501 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7142/Home/VisitCountSet - 200 null application/json; charset=utf-8 97.0932ms
+2026-09-29 14:50:09.380 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/result/MjUxMDI1NTAxMDAwMQ== - null null
+2026-09-29 14:50:09.386 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7142/admin/dashboard/coursemasterrule - application/x-www-form-urlencoded 271
+2026-09-29 14:50:09.391 +05:30 [INF] Executing endpoint 'MVVU_RESULT_UI.Controllers.HomeController.Result (MVVU_RESULT_UI)'
+2026-09-29 14:50:09.395 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/admin/dashboard - null null
+2026-09-29 14:50:09.407 +05:30 [INF] CORS policy execution successful.
+2026-09-29 14:50:09.409 +05:30 [INF] Executing endpoint 'MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.CourseMasterRule (MVVU_RESULT_UI)'
+2026-09-29 14:50:09.410 +05:30 [INF] Executing endpoint 'MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.Index (MVVU_RESULT_UI)'
+2026-09-29 14:50:09.410 +05:30 [INF] Route matched with {action = "Result", controller = "Home", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Result(System.String) on controller MVVU_RESULT_UI.Controllers.HomeController (MVVU_RESULT_UI).
+2026-09-29 14:50:09.413 +05:30 [INF] Executing ViewResult, running view Result.
+2026-09-29 14:50:09.413 +05:30 [INF] Route matched with {area = "Admin", action = "Index", controller = "Dashboard", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController (MVVU_RESULT_UI).
+2026-09-29 14:50:09.413 +05:30 [INF] Route matched with {area = "Admin", action = "CourseMasterRule", controller = "Dashboard", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CourseMasterRule(Boolean, System.String, System.String) on controller MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController (MVVU_RESULT_UI).
+2026-09-29 14:50:09.414 +05:30 [INF] Executing ViewResult, running view Index.
+2026-09-29 14:50:09.432 +05:30 [INF] Executed ViewResult - view Index executed in 18.1491ms.
+2026-09-29 14:50:09.433 +05:30 [INF] Executed action MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.Index (MVVU_RESULT_UI) in 19.9009ms
+2026-09-29 14:50:09.434 +05:30 [INF] Executed endpoint 'MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.Index (MVVU_RESULT_UI)'
+2026-09-29 14:50:09.434 +05:30 [INF] HTTP GET /admin/dashboard responded 200 in 24.4845 ms
+2026-09-29 14:50:09.435 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/admin/dashboard - 200 null text/html; charset=utf-8 40.1504ms
+2026-09-29 14:50:09.446 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-29 14:50:09.446 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2026-09-29 14:50:09.448 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 2.1503ms
+2026-09-29 14:50:09.467 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.136ms
+2026-09-29 14:50:09.562 +05:30 [INF] Executing ViewResult, running view CourseMasterRule.
+2026-09-29 14:50:09.655 +05:30 [INF] Executed ViewResult - view Result executed in 243.6058ms.
+2026-09-29 14:50:09.655 +05:30 [INF] Executed action MVVU_RESULT_UI.Controllers.HomeController.Result (MVVU_RESULT_UI) in 244.3464ms
+2026-09-29 14:50:09.655 +05:30 [INF] Executed endpoint 'MVVU_RESULT_UI.Controllers.HomeController.Result (MVVU_RESULT_UI)'
+2026-09-29 14:50:09.655 +05:30 [INF] HTTP GET /result/MjUxMDI1NTAxMDAwMQ== responded 200 in 264.2682 ms
+2026-09-29 14:50:09.655 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/result/MjUxMDI1NTAxMDAwMQ== - 200 null text/html; charset=utf-8 275.473ms
+2026-09-29 14:50:09.670 +05:30 [INF] Executed ViewResult - view CourseMasterRule executed in 107.6526ms.
+2026-09-29 14:50:09.670 +05:30 [INF] Executed action MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.CourseMasterRule (MVVU_RESULT_UI) in 256.4222ms
+2026-09-29 14:50:09.670 +05:30 [INF] Executed endpoint 'MVVU_RESULT_UI.Areas.Admin.Controllers.DashboardController.CourseMasterRule (MVVU_RESULT_UI)'
+2026-09-29 14:50:09.670 +05:30 [INF] HTTP POST /admin/dashboard/coursemasterrule responded 200 in 261.1896 ms
+2026-09-29 14:50:09.670 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7142/admin/dashboard/coursemasterrule - 200 null text/html; charset=utf-8 284.7773ms
+2026-09-29 14:50:09.681 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2026-09-29 14:50:09.681 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-29 14:50:09.686 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 3.7998ms
+2026-09-29 14:50:09.712 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.9891ms
+2026-09-29 14:50:09.724 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-29 14:50:09.724 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2026-09-29 14:50:09.725 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 1.7569ms
+2026-09-29 14:50:09.735 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7142/Home/VisitCountSet - application/json; charset=UTF-8 171
+2026-09-29 14:50:09.736 +05:30 [INF] CORS policy execution successful.
+2026-09-29 14:50:09.737 +05:30 [INF] Executing endpoint 'MVVU_RESULT_UI.Controllers.HomeController.VisitCountSet (MVVU_RESULT_UI)'
+2026-09-29 14:50:09.750 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 26.1066ms
+2026-09-29 14:50:09.751 +05:30 [INF] Route matched with {action = "VisitCountSet", controller = "Home", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] VisitCountSet(MVVU_RESULT_MODEL.DTO.StudentMasterDTOCount) on controller MVVU_RESULT_UI.Controllers.HomeController (MVVU_RESULT_UI).
+2026-09-29 14:50:09.885 +05:30 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-09-29 14:50:09.886 +05:30 [INF] Executed action MVVU_RESULT_UI.Controllers.HomeController.VisitCountSet (MVVU_RESULT_UI) in 134.3043ms
+2026-09-29 14:50:09.886 +05:30 [INF] Executed endpoint 'MVVU_RESULT_UI.Controllers.HomeController.VisitCountSet (MVVU_RESULT_UI)'
+2026-09-29 14:50:09.886 +05:30 [INF] HTTP POST /Home/VisitCountSet responded 200 in 149.2362 ms
+2026-09-29 14:50:09.886 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7142/Home/VisitCountSet - 200 null application/json; charset=utf-8 151.2426ms

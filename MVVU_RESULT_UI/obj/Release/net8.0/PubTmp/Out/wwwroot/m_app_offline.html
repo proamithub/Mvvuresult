@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maa Vindhyavasini University, Mirzapur</title>
+    <link href="favicon.png" rel="icon" type="image/png" />
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #030611;
+            color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* --- Enhanced Luminous Moving Stars Layer --- */
+        .stars-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .star-layer {
+            position: absolute;
+            background: transparent;
+            border-radius: 50%;
+            /* Adds a soft glowing aura around all stars */
+            filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 8px rgba(96, 165, 250, 0.4));
+        }
+
+        /* Small Bright Twinkling Stars */
+        .star-layer-1 {
+            width: 2px;
+            height: 2px;
+            box-shadow: 120px 40px #fff, 850px 320px #fff, 430px 710px #fff, 1500px 90px rgba(255,255,255,0.8), 1100px 600px #fff, 250px 850px #fff, 1650px 780px #fff, 720px 150px #fff;
+            animation: moveStars 70s linear infinite, twinkle 3s ease-in-out infinite alternate;
+        }
+
+        /* Larger Intense Glowing Stars */
+        .star-layer-2 {
+            width: 3.5px;
+            height: 3.5px;
+            box-shadow: 300px 500px #fff, 1200px 200px #fff, 950px 800px #fff, 150px 180px #fff, 1750px 450px #fff, 600px 900px #fff;
+            animation: moveStars 110s linear infinite, twinkle 4.5s ease-in-out infinite alternate;
+            animation-delay: -15s;
+        }
+
+        /* --- Animated Code Background --- */
+        .code-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 13px;
+            line-height: 1.6;
+            color: rgba(96, 165, 250, 0.05);
+            user-select: none;
+            pointer-events: none;
+            z-index: 1;
+            display: flex;
+            justify-content: space-around;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .code-column {
+            display: flex;
+            flex-direction: column;
+            animation: streamCode 25s linear infinite;
+        }
+
+        .code-column:nth-child(2) { animation-duration: 35s; animation-delay: -5s; color: rgba(139, 92, 246, 0.04); } 
+        .code-column:nth-child(3) { animation-duration: 20s; animation-delay: -12s; }
+        .code-column:nth-child(4) { animation-duration: 40s; animation-delay: -2s; color: rgba(236, 72, 153, 0.03); } 
+        .code-column:nth-child(5) { animation-duration: 28s; animation-delay: -8s; }
+
+        /* Background radial gradient shield to safeguard text visibility */
+        .overlay-glow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(3, 6, 17, 0.1) 0%, #030611 85%);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        /* --- Premium Central UI Card --- */
+        .error-container {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            max-width: 580px;
+            width: 100%;
+            background: rgba(11, 18, 36, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 50px 40px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+            animation: cardEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .maintenance-icon {
+            margin-bottom: 25px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 74px;
+            height: 74px;
+            border-radius: 22px;
+            background: rgba(59, 130, 246, 0.12);
+            border: 1px solid rgba(59, 130, 246, 0.25);
+            color: #60a5fa;
+            font-size: 30px;
+            animation: pulseIcon 2s infinite ease-in-out;
+        }
+
+        .subhead {
+            font-size: 38px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            background: linear-gradient(to right, #ffffff, #cbd5e1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out 0.3s forwards;
+        }
+
+        .subttl {
+            font-size: 18px;
+            color: #f43f5e;
+            font-weight: 500;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out 0.5s forwards;
+        }
+
+        .textp {
+            font-size: 15px;
+            color: #94a3b8;
+            margin-bottom: 35px;
+            line-height: 1.7;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out 0.7s forwards;
+        }
+
+        .textp strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .backlinks {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out 0.9s forwards;
+        }
+
+        .backlinks a {
+            font-size: 14px;
+            text-decoration: none;
+            color: #ffffff;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            padding: 13px 36px;
+            border-radius: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.25);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            display: inline-block;
+        }
+
+        .backlinks a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(59, 130, 246, 0.45);
+            background: linear-gradient(135deg, #60a5fa, #3b82f6);
+        }
+
+        /* --- Keyframe Animations --- */
+        @keyframes moveStars {
+            from { transform: translateY(0px) rotate(0deg); }
+            to { transform: translateY(-1000px) rotate(10deg); }
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; filter: drop-shadow(0 0 2px rgba(255,255,255,0.4)); }
+            50% { opacity: 1; filter: drop-shadow(0 0 8px rgba(255,255,255,1)) drop-shadow(0 0 12px rgba(96,165,250,0.8)); }
+        }
+
+        @keyframes streamCode {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+        }
+
+        @keyframes cardEntrance {
+            from { opacity: 0; transform: scale(0.96) translateY(20px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulseIcon {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 0 rgba(59, 130, 246, 0); }
+            50% { transform: scale(1.04); box-shadow: 0 0 20px rgba(59, 130, 246, 0.2); }
+        }
+
+        /* Responsive Optimization */
+        @media (max-width: 480px) {
+            .error-container { padding: 40px 20px; }
+            .subhead { font-size: 28px; }
+            .subttl { font-size: 16px; }
+            .code-bg { font-size: 11px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- High-Glow Traveling & Twinkling Stars -->
+<div class="stars-container">
+    <div class="star-layer star-layer-1"></div>
+    <div class="star-layer star-layer-2"></div>
+</div>
+
+<!-- Matrix Code Streams -->
+<div class="code-bg">
+    <div class="code-column">
+        <span>const app = express();</span>
+        <span>db.connect((err) => {</span>
+        <span>  if (err) throw err;</span>
+        <span>  console.log('SQL Connected');</span>
+        <span>});</span>
+        <span>// Optimizing Clusters</span>
+        <span>function initSystem() {</span>
+        <span>  sys.status = 'MAINTENANCE';</span>
+        <span>  migrateDatabase();</span>
+        <span>}</span>
+        <span>const app = express();</span>
+    </div>
+    <div class="code-column">
+        <span>&lt;div class="db-wrapper"&gt;</span>
+        <span>  &lt;span class="loader"&gt;&lt;/span&gt;</span>
+        <span>  &lt;h1&gt;Rebuilding Index&lt;/h1&gt;</span>
+        <span>&lt;/div&gt;</span>
+        <span>.matrix { display: grid; }</span>
+    </div>
+    <div class="code-column">
+        <span>npm run build --production</span>
+        <span>[INFO] Bundling assets...</span>
+        <span>[SUCCESS] Compilation complete.</span>
+        <span>Memory usage: 42%</span>
+    </div>
+    <div class="code-column">
+        <span>import { server } from 'core';</span>
+        <span>async function healthCheck() {</span>
+        <span>  const status = await server.ping();</span>
+        <span>  return status.ok;</span>
+        <span>}</span>
+    </div>
+</div>
+
+<div class="overlay-glow"></div>
+
+<div class="error-container">
+    <div class="maintenance-icon">⚙️</div>
+    
+    <h1 class="subhead">Under Maintenance</h1>
+    <div class="subttl">We sincerely apologize for the inconvenience.</div>
+    <p class="textp">Our systems are currently undergoing optimized server migrations and framework tune-ups. The <strong>Maa Vindhyavasini University, Mirzapur</strong> portal will return shortly.</p>
+
+    <div class="backlinks">
+        <a href="#" onclick="window.location.reload();">Check Status</a>
+    </div>
+</div>
+
+</body>
+</html>

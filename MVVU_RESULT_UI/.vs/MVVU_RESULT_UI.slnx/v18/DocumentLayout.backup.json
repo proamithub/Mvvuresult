@@ -1,0 +1,130 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\MVVU_RESULT\\MVVU_RESULT_UI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D410FCDE-AC37-4B68-3F73-7459CFDF7274}|MVVU_RESULT_UI.csproj|d:\\mvvu_result\\mvvu_result_ui\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D410FCDE-AC37-4B68-3F73-7459CFDF7274}|MVVU_RESULT_UI.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D410FCDE-AC37-4B68-3F73-7459CFDF7274}|MVVU_RESULT_UI.csproj|d:\\mvvu_result\\mvvu_result_ui\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D410FCDE-AC37-4B68-3F73-7459CFDF7274}|MVVU_RESULT_UI.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D410FCDE-AC37-4B68-3F73-7459CFDF7274}|MVVU_RESULT_UI.csproj|d:\\mvvu_result\\mvvu_result_ui\\views\\shared\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D410FCDE-AC37-4B68-3F73-7459CFDF7274}|MVVU_RESULT_UI.csproj|solutionrelative:views\\shared\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D410FCDE-AC37-4B68-3F73-7459CFDF7274}|MVVU_RESULT_UI.csproj|d:\\mvvu_result\\mvvu_result_ui\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D410FCDE-AC37-4B68-3F73-7459CFDF7274}|MVVU_RESULT_UI.csproj|solutionrelative:views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D410FCDE-AC37-4B68-3F73-7459CFDF7274}|MVVU_RESULT_UI.csproj|d:\\mvvu_result\\mvvu_result_ui\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D410FCDE-AC37-4B68-3F73-7459CFDF7274}|MVVU_RESULT_UI.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D410FCDE-AC37-4B68-3F73-7459CFDF7274}|MVVU_RESULT_UI.csproj|d:\\mvvu_result\\mvvu_result_ui\\components\\resultviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D410FCDE-AC37-4B68-3F73-7459CFDF7274}|MVVU_RESULT_UI.csproj|solutionrelative:components\\resultviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_footer.cshtml",
+              "DocumentMoniker": "D:\\MVVU_RESULT\\MVVU_RESULT_UI\\Views\\Shared\\_footer.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_footer.cshtml",
+              "ToolTip": "D:\\MVVU_RESULT\\MVVU_RESULT_UI\\Views\\Shared\\_footer.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_footer.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T10:50:59.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\MVVU_RESULT\\MVVU_RESULT_UI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\MVVU_RESULT\\MVVU_RESULT_UI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAACIAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T10:50:48.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\MVVU_RESULT\\MVVU_RESULT_UI\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\MVVU_RESULT\\MVVU_RESULT_UI\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAEsCAAAAAAAAAAAYwGMCAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T10:46:52.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "D:\\MVVU_RESULT\\MVVU_RESULT_UI\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
+              "ToolTip": "D:\\MVVU_RESULT\\MVVU_RESULT_UI\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T10:46:22.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\MVVU_RESULT\\MVVU_RESULT_UI\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "D:\\MVVU_RESULT\\MVVU_RESULT_UI\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAKYAAAAAAAAAAAAewG4AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T10:30:00.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ResultViewComponent.cs",
+              "DocumentMoniker": "D:\\MVVU_RESULT\\MVVU_RESULT_UI\\Components\\ResultViewComponent.cs",
+              "RelativeDocumentMoniker": "Components\\ResultViewComponent.cs",
+              "ToolTip": "D:\\MVVU_RESULT\\MVVU_RESULT_UI\\Components\\ResultViewComponent.cs",
+              "RelativeToolTip": "Components\\ResultViewComponent.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAgwCgAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T10:29:49.045Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
