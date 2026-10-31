@@ -81,6 +81,14 @@
             transform: translate(-50%, -50%) !important;
             -webkit-transform: translate(-50%, -50%) !important;
         }
+
+        .watermark img {
+            width: 550px !important;
+            height: 550px !important;
+            opacity: 0.085 !important;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
     }
 </style>
 
@@ -127,7 +135,8 @@
             '.table td, .table th { padding: 2.5px 3px !important; border-top: none; }' +
             '#prnttb table tr th:last-child, #prnttb table tr td:last-child { border-right: 1px solid #000 !important; }' +
             '#prnttb > div > table { border: 1px solid #000 !important; }' +
-            '.watermark { top: 50% !important; left: 50% !important; transform: translate(-50%, -50%) !important; -webkit-transform: translate(-50%, -50%) !important; }';
+            '.watermark { top: 50% !important; left: 50% !important; transform: translate(-50%, -50%) !important; -webkit-transform: translate(-50%, -50%) !important; }' +
+            '.watermark img { width: 550px !important; height: 550px !important; opacity: 0.085 !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }';
 
         newWin.document.open();
         newWin.document.write('<!DOCTYPE html>');
