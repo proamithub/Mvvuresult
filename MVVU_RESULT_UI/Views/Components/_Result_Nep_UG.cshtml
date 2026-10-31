@@ -588,18 +588,30 @@
                                             int r4 = 0;
                                             @if (Model.MarksList.Where(x => x.SUBJECT_TYPE.ToUpper() == "MINOR").Count() > 0)
                                             {
-                                                foreach (var item in Model.MarksList.Where(x => x.SUBJECT_TYPE.ToUpper() == "MINOR"))
+                                                foreach (var item in Model.MarksList.Where(x => x.SUBJECT_TYPE.ToUpper() == "MINOR").OrderBy(x => x.PAPER_SERIAL))
                                                 {
+                                                    string btmborder = "";
                                                     <tr style="font-size:12px;">
 
-                                                        <td style="border-right: 1px solid #000 !important;border-top: 1px solid #000 !important;border-bottom: 1px solid #000 !important;">
-                                                            <span> @c </span>
+                                                        @if (r4 == 0)
+                                                        {
+                                                            if (Model.MarksList.Where(x => x.SUBJECT_TYPE.ToUpper() == "MINOR").Count() == 1)
+                                                            {
+                                                                btmborder = "border-bottom: 1px solid #000 !important;";
+                                                            }
+                                                            <td style="border-right: 1px solid #000 !important;border-top: 1px solid #000 !important;@btmborder">
+                                                                <span> @c </span>
 
-                                                        </td>
-                                                        <td style="border-right: 1px solid #000 !important;border-top: 1px solid #000 !important;border-bottom: 1px solid #000 !important;"> <strong>@item.SUBJECT_NAME</strong> </td>
-
-
-
+                                                            </td>
+                                                            <td style="border-right: 1px solid #000 !important;border-top: 1px solid #000 !important;@btmborder"> <strong>@item.SUBJECT_NAME</strong> </td>
+                                                        }
+                                                        else
+                                                        {
+                                                            <td style="border-right: 1px solid #000 !important;border-bottom: 1px solid #000 !important;">
+                                                            </td>
+                                                            <td style="border-right: 1px solid #000 !important;border-bottom: 1px solid #000 !important;">
+                                                            </td>
+                                                        }
                                                         <td style="border-right: 1px solid #000 !important;border-bottom: 1px solid #000 !important;text-align:center"> @item.PCODE </td>
                                                         <td style="border-right: 1px solid #000 !important;border-bottom: 1px solid #000 !important;"> @item.PNAME_R </td>
                                                         <td style="border-right: 1px solid #000 !important;border-bottom: 1px solid #000 !important;text-align:center">
@@ -748,7 +760,7 @@
                                         @if (Model.MarksList.Where(x => x.SUBJECT_TYPE.ToUpper() == "VOCATIONAL").Count() > 0)
                                         {
                                             <tr style="font-size:12px;">
-                                                <td colspan="9" style="border-bottom: 1px solid #000 !important;font-weight:bold"> VOCATIONAL Subject</td>
+                                                <td colspan="9" style="border-top: 1px solid #000 !important;border-bottom: 1px solid #000 !important;font-weight:bold"> VOCATIONAL Subject</td>
                                             </tr>
 
                                             foreach (var item in Model.MarksList.Where(x => x.SUBJECT_TYPE.ToUpper() == "VOCATIONAL"))
