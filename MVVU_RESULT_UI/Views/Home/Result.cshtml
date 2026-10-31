@@ -6,13 +6,14 @@
 <style>
     @@media only screen and (max-width: 600px) {
         body {
-            width: 30cm;
+            min-width: 30cm;
         }
     }
 
     @@media print {
         @@page {
             size: portrait;
+            margin: 4mm 5mm;
         }
 
         * {
@@ -25,33 +26,53 @@
             display: none !important;
         }
 
-        body {
+        html, body {
             background: #fff !important;
             margin: 0 !important;
             padding: 0 !important;
             width: 100% !important;
+            min-width: 0 !important;
+            max-width: 100% !important;
+            overflow: visible !important;
         }
 
-        #wrap, .container {
+        #wrap, .container, .row, #Cpytxt {
             max-width: 100% !important;
             width: 100% !important;
+            min-width: 0 !important;
             padding: 0 !important;
             margin: 0 !important;
+            border: none !important;
         }
 
         .page {
-            margin: 0 auto !important;
+            margin: 0 !important;
             box-shadow: none !important;
             border: none !important;
             padding: 0 !important;
             width: 100% !important;
+            max-width: 100% !important;
+            min-width: 0 !important;
+            min-height: auto !important;
+            height: auto !important;
+            background: #fff !important;
+        }
+
+        .subpage {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            min-width: 0 !important;
         }
 
         #prnttb {
             width: 100% !important;
             max-width: 100% !important;
+            min-width: 0 !important;
             box-sizing: border-box !important;
-            padding-right: 1px !important;
+            padding: 0 !important;
+            margin: 0 !important;
         }
 
         .table {
@@ -65,14 +86,27 @@
             border-top: none !important;
         }
 
+        /* Ensure outer table has crisp 1px borders all around */
+        #prnttb > div > table,
+        #prnttb > table {
+            width: 100% !important;
+            border: 1px solid #000 !important;
+            border-collapse: collapse !important;
+        }
+
+        /* Ensure all direct outer cells have left and right borders */
+        #prnttb > div > table > tbody > tr > td,
+        #prnttb > div > table > tr > td,
+        #prnttb > table > tbody > tr > td,
+        #prnttb > table > tr > td {
+            border-left: 1px solid #000 !important;
+            border-right: 1px solid #000 !important;
+        }
+
         /* Ensure right-most border is never cut off */
         #prnttb table tr th:last-child,
         #prnttb table tr td:last-child {
             border-right: 1px solid #000 !important;
-        }
-
-        #prnttb > div > table {
-            border: 1px solid #000 !important;
         }
 
         .watermark {
@@ -134,7 +168,8 @@
             '.table { width: 100% !important; border-collapse: collapse !important; margin: 0 !important; }' +
             '.table td, .table th { padding: 2.5px 3px !important; border-top: none; }' +
             '#prnttb table tr th:last-child, #prnttb table tr td:last-child { border-right: 1px solid #000 !important; }' +
-            '#prnttb > div > table { border: 1px solid #000 !important; }' +
+            '#prnttb > div > table, #prnttb > table { width: 100% !important; border: 1px solid #000 !important; border-collapse: collapse !important; }' +
+            '#prnttb > div > table > tbody > tr > td, #prnttb > div > table > tr > td, #prnttb > table > tbody > tr > td, #prnttb > table > tr > td { border-left: 1px solid #000 !important; border-right: 1px solid #000 !important; }' +
             '.watermark { top: 50% !important; left: 50% !important; transform: translate(-50%, -50%) !important; -webkit-transform: translate(-50%, -50%) !important; }' +
             '.watermark img { width: 550px !important; height: 550px !important; opacity: 0.085 !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }';
 
