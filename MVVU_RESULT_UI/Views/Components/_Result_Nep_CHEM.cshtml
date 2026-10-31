@@ -1,4 +1,4 @@
-﻿@model StudentMasterDTO
+@model StudentMasterDTO
 @{
     var we = "";
     var imgurl = Model.ImageURL + Model.MPATH;
@@ -30,6 +30,22 @@
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);">
             <div class="subpage" style=" color: #000; font-family: Arial; font-size: 13px">
                 <div id="prnttb">
+                    <div style="position: relative;">
+                        <div class="watermark" style="position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            -webkit-transform: translate(-50%, -50%);
+                            width: 550px;
+                            height: 550px;
+                            text-align: center;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: contain;
+                            background-image: url('https://result.mvvu.ac.in/DHRAU_Watermark.png');
+                            z-index: 9999;
+                            opacity: 0.075;
+                            pointer-events: none;"></div>
                     <table style="width: 100% ;  border-collapse: collapse;" class="table ">
 
 
@@ -74,16 +90,6 @@
                         <tr style="padding:0px;border-left: 1px solid #000 !important;border-right: 1px solid #000 !important;">
 
                             <td style="border-bottom:none !important; padding:0px">
-                                <div class="watermark" style="position: absolute;font-size: 3em;
-                                width: 550px;
-                                height: 550px;
-                                left: 500px;
-                                top: 25%;
-                                text-align:center;
-                                background-repeat: no-repeat;
-                                background-image: url('https://result.mvvu.ac.in/DHRAU_Watermark.png');
-                                z-index: 9999;
-                                opacity: 0.075;"></div>
                                 <table style="width: 100%;  border-collapse: collapse;">
                                     <tbody>
                                         <tr>
@@ -824,6 +830,7 @@
                         </td>
                     </tr>
                 </table>
+                </div>
 
                 @* -------------page-------------- *@
                 <table style="width: 100% ;page-break-before: always;  border-collapse: collapse;" class="table ">

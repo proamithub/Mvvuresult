@@ -1,8 +1,6 @@
-﻿@model StudentMasterDTO
+@model StudentMasterDTO
 @{
     ViewBag.Title = "Student Admitted";
-    //Layout = null;
-
 }
 
 <style>
@@ -12,100 +10,148 @@
         }
     }
 
-
     @@media print {
         @@page {
-            size: landscape;
+            size: portrait;
+        }
+
+        * {
+            box-sizing: border-box !important;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+
+        .login-header, #footer, footer, .btn, .no-print, .hidden-print {
+            display: none !important;
+        }
+
+        body {
+            background: #fff !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+        }
+
+        #wrap, .container {
+            max-width: 100% !important;
+            width: 100% !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        .page {
+            margin: 0 auto !important;
+            box-shadow: none !important;
+            border: none !important;
+            padding: 0 !important;
+            width: 100% !important;
+        }
+
+        #prnttb {
+            width: 100% !important;
+            max-width: 100% !important;
+            box-sizing: border-box !important;
+            padding-right: 1px !important;
+        }
+
+        .table {
+            width: 100% !important;
+            border-collapse: collapse !important;
+            margin-bottom: 0 !important;
+        }
+
+        .table td, .table th {
+            padding: 2.5px 3px !important;
+            border-top: none !important;
+        }
+
+        /* Ensure right-most border is never cut off */
+        #prnttb table tr th:last-child,
+        #prnttb table tr td:last-child {
+            border-right: 1px solid #000 !important;
+        }
+
+        #prnttb > div > table {
+            border: 1px solid #000 !important;
+        }
+
+        .watermark {
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) !important;
+            -webkit-transform: translate(-50%, -50%) !important;
         }
     }
 </style>
 
-<div class="container p-3">
-
-    <div class="row">
-        @await Component.InvokeAsync("Result", new { data = Model.EncrptedRoll })
-
-    </div>
-</div>
-
-<script language="javascript" type="text/javascript">
-
+<script type="text/javascript">
     function windowclose() {
         window.close();
-
-
     }
 
-    // function PrintPanel(copy) {
-    //     // $("#Cpytxt").print();
-    //     var display_settings = "toolbar=yes,location=no,directoried=yes,menubar=yes,scrollbars=yes,top=25,left=100,height=500 width=800,resizable=yes";
-    //     var content = document.getElementById(copy).innerHTML;
-    //     var docprint = window.open('', '', display_settings);
-    //     docprint.document.write('<html><head ></head><form onLoad="self.print();"><center>' + content + '</center></form></html>');
-    //     docprint.print();
-    //     docprint.document.close();
-    //     docprint.focus();
-    //     return false;
-    // }
     function PrintPanel(copy, name) {
+        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+        if (isMobile) {
+            var oldTitle = document.title;
+            if (name) {
+                document.title = name;
+            }
+            window.print();
+            if (name) {
+                setTimeout(function () {
+                    document.title = oldTitle;
+                }, 2000);
+            }
+            return false;
+        }
+
+        // Desktop print
         var divToPrint = document.getElementById(copy);
-        var htmlToPrint = '<style type="text/css">' +
-            '.table td, .table th {' +
-            'padding:3px;' +
-            'border-top: none;' +
-            '}' +
-            '.watermark{left:100px !important;}' +
-            '</style>';
-        htmlToPrint += divToPrint.outerHTML;
-        newWin = window.open("https://result.mvvu.ac.in/");
-        newWin.document.write('<head><title>' + name + '</title>');
-        // newWin.document.write("<h3 align='center'>Print Page</h3>");
-        newWin.document.write(htmlToPrint);
-        newWin.print();
-        newWin.close();
-    }
+        if (!divToPrint) {
+            window.print();
+            return false;
+        }
 
-    // function PrintPanel() {
-    //     var divToPrint = document.getElementById('Grid');
-    //     var htmlToPrint = '';
-    //     htmlToPrint += divToPrint.outerHTML;
-    //     var newWin = window.open("", "_blank", "width=800,height=600");
-    //     newWin.document.write(htmlToPrint);
-    //     newWin.document.close();
-    //     setTimeout(function () {
-    //         newWin.print();
-    //     }, 0);
-    //     return false;
-    // }
-</script>
+        var newWin = window.open('', '_blank');
+        if (!newWin) {
+            window.print();
+            return false;
+        }
 
+        var printCss = '* { box-sizing: border-box !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }' +
+            '@@page { size: portrait; }' +
+            'html, body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fff; width: 100%; }' +
+            '#prnttb { width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; padding-right: 2px !important; }' +
+            '.table { width: 100% !important; border-collapse: collapse !important; margin: 0 !important; }' +
+            '.table td, .table th { padding: 2.5px 3px !important; border-top: none; }' +
+            '#prnttb table tr th:last-child, #prnttb table tr td:last-child { border-right: 1px solid #000 !important; }' +
+            '#prnttb > div > table { border: 1px solid #000 !important; }' +
+            '.watermark { top: 50% !important; left: 50% !important; transform: translate(-50%, -50%) !important; -webkit-transform: translate(-50%, -50%) !important; }';
 
-@* <script>
-    function PrintPanel(copy) {
-
-        var divToPrint = document.getElementById('Cpytxt');
-        var htmlToPrint = '';
-        htmlToPrint += divToPrint.outerHTML;
-        var newWin = window.open("");
-        newWin.document.write(htmlToPrint);
+        newWin.document.open();
+        newWin.document.write('<!DOCTYPE html>');
+        newWin.document.write('<' + 'html><' + 'head><' + 'title>' + (name || 'Result') + '<' + '/title>');
+        newWin.document.write('<' + 'style type="text/css">' + printCss + '<' + '/style>');
+        newWin.document.write('<' + '/head><' + 'body>');
+        newWin.document.write(divToPrint.outerHTML);
+        newWin.document.write('<' + '/body><' + '/html>');
         newWin.document.close();
+        newWin.document.title = (name || 'Result');
+        newWin.focus();
+
         setTimeout(function () {
             newWin.print();
-        }, 0);
+            newWin.close();
+        }, 400);
+
         return false;
     }
-</script> *@
+    window.PrintPanel = PrintPanel;
+</script>
 
-@*
-<script>
-    function PrintPanel(copy) {
-        var printContents = document.getElementById(copy).innerHTML;
-        var originalContents = document.body.innerHTML;
-
-        document.body.innerHTML = printContents;
-
-        window.print();
-
-        document.body.innerHTML = originalContents;
-    }
-</script> *@
+<div class="container p-3">
+    <div class="row">
+        @await Component.InvokeAsync("Result", new { data = Model.EncrptedRoll })
+    </div>
+</div>
