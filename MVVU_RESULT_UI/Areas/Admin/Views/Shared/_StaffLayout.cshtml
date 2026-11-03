@@ -1,4 +1,4 @@
-﻿@using MVVU_RESULT_MODEL
+@using MVVU_RESULT_MODEL
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,6 +38,78 @@
 </head>
 
 <style>
+    .main-sidebar-custom {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-sidebar-custom .sidebar {
+        flex: 1 1 auto;
+        overflow-y: auto;
+    }
+
+    .main-sidebar-custom .sidebar-custom {
+        flex: 0 0 auto;
+        height: 4rem;
+        padding: .85rem .75rem;
+        border-top: 1px solid rgba(255,255,255,.1);
+        background-color: #343a40;
+        z-index: 1000;
+        transition: padding 0.3s ease;
+    }
+
+    .main-sidebar-custom .sidebar-custom .btn-logout {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+        transition: all 0.3s ease;
+    }
+
+    .main-sidebar-custom .sidebar-custom .btn-logout i {
+        font-size: 1.1rem;
+        margin-right: 0.5rem;
+        transition: margin 0.3s ease;
+    }
+
+    .main-sidebar-custom .sidebar-custom .btn-logout .logout-text {
+        display: inline;
+        transition: opacity 0.3s ease;
+    }
+
+    .sidebar-collapse .main-sidebar-custom .sidebar-custom {
+        padding: .85rem .5rem !important;
+    }
+
+    .sidebar-collapse .main-sidebar-custom .sidebar-custom .btn-logout {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        justify-content: center !important;
+    }
+
+    .sidebar-collapse .main-sidebar-custom .sidebar-custom .btn-logout i {
+        margin-right: 0 !important;
+    }
+
+    .sidebar-collapse .main-sidebar-custom .sidebar-custom .btn-logout .logout-text {
+        display: none !important;
+    }
+
+    .sidebar-mini.sidebar-collapse .main-sidebar-custom:hover .sidebar-custom {
+        padding: .85rem .75rem !important;
+    }
+
+    .sidebar-mini.sidebar-collapse .main-sidebar-custom:hover .sidebar-custom .btn-logout i {
+        margin-right: 0.5rem !important;
+    }
+
+    .sidebar-mini.sidebar-collapse .main-sidebar-custom:hover .sidebar-custom .btn-logout .logout-text {
+        display: inline !important;
+    }
+
     .input-validation-error {
         background: #fa00001c !important;
         border: 1px solid #ff0000 !important;
@@ -85,7 +157,7 @@
         </nav>
         <!-- /.navbar -->
         @*@await Html.PartialAsync("_menuAdmin")*@
-        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <aside class="main-sidebar main-sidebar-custom sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="/admin/lindex" class="brand-link">
                 <img src="/logo_header.png" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -146,6 +218,12 @@
                 <!-- /.sidebar-menu -->
             </div>
             <!-- /.sidebar -->
+            <div class="sidebar-custom">
+                <a href="@Url.Action("SignOut", "Home", new { area = "" })" class="btn btn-danger btn-block btn-logout" role="button" title="Logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="logout-text">Logout</span>
+                </a>
+            </div>
         </aside>
         <!-- Main Sidebar Container -->
         @RenderBody()
