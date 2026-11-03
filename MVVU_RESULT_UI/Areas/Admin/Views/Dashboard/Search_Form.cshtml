@@ -1,4 +1,4 @@
-﻿@using System.Security.Claims
+@using System.Security.Claims
 @model MVVU_RESULT_MODEL.DTO.COURSE_MASTER_AM_DTO_DASH
 @{
     ViewData["Title"] = "FORM";
@@ -7,7 +7,6 @@
     var data = Model.CourseList;
 }
 <style>
-
     .ldrpge {
         position: absolute;
         display: none;
@@ -27,7 +26,38 @@
             top: 350px;
             transform: translate(-50%, -50%);
         }
+
+    /* Voice / Mic input styles */
+    .btn-mic-pulse {
+        background-color: #dc3545 !important;
+        border-color: #dc3545 !important;
+        color: #fff !important;
+        animation: micPulseAnim 1.2s infinite ease-in-out;
+    }
+
+    @@keyframes micPulseAnim {
+        0% {
+            box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7);
+        }
+        70% {
+            box-shadow: 0 0 0 12px rgba(220, 53, 69, 0);
+        }
+        100% {
+            box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+        }
+    }
+
+    #micStatusMsg {
+        display: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin-top: 8px;
+        padding: 4px 10px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
 </style>
+
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
@@ -35,92 +65,248 @@
             <div class="row">
                 <div class="col-md-7 offset-md-2">
                     <div class="input-group">
-
                         <input type="text" id="TicketBox1" name="TicketBox1" class="form-control form-control-lg" placeholder="Enter Roll No.">
                         <div class="input-group-append">
-
-                            <button type="button" class="btn btn-lg btn-default" onclick="SearchTicketAdminOther()">
+                            <!-- Mic Button for voice input -->
+                            <button type="button" class="btn btn-lg btn-default" id="btnMicRoll" title="Click to speak Roll Number" style="border-right: none;">
+                                <i class="fas fa-microphone" id="micIconRoll"></i>
+                            </button>
+                            <button type="button" class="btn btn-lg btn-primary" onclick="SearchTicketAdminOther()" title="Search">
                                 <i class="fa fa-search"></i>
                             </button>
-
-
                         </div>
                     </div>
-
-
+                    <!-- Live voice status feedback -->
+                    <div id="micStatusMsg" class="text-center"></div>
                 </div>
-                @* <a class="float-end m-2" id="AllResultView" href="javascript:void(0)" onclick="GetAllResult()">  Consolidated Result</a> *@
             </div>
         </div><!-- /.container-fluid -->
     </div>
 
     <div class="container-fluid">
-
-
         <div id="pagedetailssearch">
         </div>
-
-
     </div>
+
     <div class="ldrpge">
         <img src="~/loader.svg" alt="" />
     </div>
-    <div class="content-body">
 
-        <!-- row -->
+    <div class="content-body">
         <div class="container-fluid">
             <h5 class="mb-2"></h5>
             <div class="row">
-                
-
             </div>
-
-
         </div>
     </div>
 </div>
+
 <script>
-     document.getElementById("TicketBox1").addEventListener("keydown", function (e) {
-         if (!e) { var e = window.event; }
-         // e.preventDefault(); // sometimes useful
+    document.getElementById("TicketBox1").addEventListener("keydown", function (e) {
+        if (!e) { var e = window.event; }
+        // Enter is pressed
+        if (e.keyCode == 13) { SearchTicketAdminOther(); }
+    }, false);
 
-         // Enter is pressed
-         if (e.keyCode == 13) { SearchTicketAdminOther(); }
-     }, false);
+    function OpenProgressBar() {
+        $(".ldrpge").show();
+    }
 
-     function OpenProgressBar() {
-         $(".ldrpge").show();
-     }
+    function CloseProgessBar() {
+        $(".ldrpge").hide();
+    }
 
-     function CloseProgessBar() {
-         // debugger;
-         $(".ldrpge").hide();
-     }
-    // AllResultView
+    function SearchTicketAdminOther() {
+        var flag = true;
+        OpenProgressBar();
+        if (flag) {
+            var RollNumber = $("#TicketBox1").val();
+            var divpdis = "/Admin/Dashboard/CheckResultDataSearch?RollNumber=";
+            $("#pagedetailssearch").load(divpdis + RollNumber, function () {
+                CloseProgessBar();
+            });
+        }
+    }
 
-     function SearchTicketAdminOther() {
-         flag = true;
+    /* ========================================================
+       VOICE SPEECH-TO-NUMBER RECOGNITION
+       ======================================================== */
+    (function () {
+        var micBtn = document.getElementById('btnMicRoll');
+        var micIcon = document.getElementById('micIconRoll');
+        var inputRoll = document.getElementById('TicketBox1');
+        var statusMsg = document.getElementById('micStatusMsg');
 
-         OpenProgressBar();
-         if (flag) {
+        var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
-             var RollNumber=$("#TicketBox1").val();
-             var divpdis = "/Admin/Dashboard/CheckResultDataSearch?RollNumber=";
-             $("#pagedetailssearch").load(divpdis + RollNumber, function () {
-                 CloseProgessBar();
+        if (!SpeechRecognition) {
+            if (micBtn) {
+                micBtn.title = "Voice recognition is not supported in this browser (Use Chrome or Edge)";
+                micBtn.style.opacity = "0.5";
+            }
+            return;
+        }
 
-             });
+        var recognition = new SpeechRecognition();
+        recognition.continuous = false;
+        recognition.interimResults = false;
+        recognition.lang = 'en-IN'; // Works great for Indian English and numbers
 
-         };
-     }
+        var isListening = false;
+        var statusTimer = null;
 
+        function showStatus(text, type) {
+            if (!statusMsg) return;
+            if (statusTimer) {
+                clearTimeout(statusTimer);
+                statusTimer = null;
+            }
+            statusMsg.style.display = 'block';
+            statusMsg.innerHTML = text;
+            if (type === 'listening') {
+                statusMsg.className = 'text-center text-danger font-weight-bold';
+            } else if (type === 'success') {
+                statusMsg.className = 'text-center text-success font-weight-bold';
+            } else if (type === 'warn') {
+                statusMsg.className = 'text-center text-warning font-weight-bold';
+            } else {
+                statusMsg.className = 'text-center text-muted';
+            }
+        }
 
-    
+        function hideStatus(delay) {
+            if (statusTimer) {
+                clearTimeout(statusTimer);
+            }
+            statusTimer = setTimeout(function () {
+                if (statusMsg && !isListening) {
+                    statusMsg.style.display = 'none';
+                    statusMsg.innerHTML = '';
+                }
+            }, delay || 2000);
+        }
 
+        // Convert spoken number words to digits
+        function parseSpokenNumbers(text) {
+            if (!text) return '';
+            var str = text.toLowerCase().trim();
+
+            var wordMap = {
+                'shunya': '0', 'zero': '0',
+                'ek': '1', 'one': '1',
+                'do': '2', 'two': '2',
+                'teen': '3', 'three': '3',
+                'chaar': '4', 'char': '4', 'four': '4',
+                'paanch': '5', 'panch': '5', 'five': '5',
+                'chhe': '6', 'chhah': '6', 'six': '6',
+                'saat': '7', 'sat': '7', 'seven': '7',
+                'aath': '8', 'ath': '8', 'eight': '8',
+                'nau': '9', 'no': '9', 'nine': '9'
+            };
+
+            // Handle "double 5" -> "55", "triple 9" -> "999"
+            str = str.replace(/double\s+([0-9a-z]+)/gi, function (match, p1) {
+                var d = wordMap[p1] || p1;
+                return d + d;
+            });
+            str = str.replace(/triple\s+([0-9a-z]+)/gi, function (match, p1) {
+                var d = wordMap[p1] || p1;
+                return d + d + d;
+            });
+
+            // Replace mapped words
+            var parts = str.split(/\s+/);
+            var parsed = '';
+            for (var i = 0; i < parts.length; i++) {
+                var w = parts[i];
+                if (wordMap[w] !== undefined) {
+                    parsed += wordMap[w];
+                } else {
+                    parsed += w;
+                }
+            }
+
+            // Extract only digits
+            return parsed.replace(/[^0-9]/g, '');
+        }
+
+        // Toggle listening on Mic button click
+        micBtn.addEventListener('click', function () {
+            if (isListening) {
+                recognition.stop();
+                resetMicUi();
+            } else {
+                try {
+                    recognition.start();
+                } catch (err) {
+                    recognition.stop();
+                    resetMicUi();
+                }
+            }
+        });
+
+        // Speech recognition events
+        recognition.onstart = function () {
+            isListening = true;
+            micBtn.classList.add('btn-mic-pulse');
+            micIcon.classList.remove('fa-microphone');
+            micIcon.classList.add('fa-microphone-alt');
+            inputRoll.placeholder = "Listening... Speak Roll Number";
+            showStatus('<i class="fas fa-circle text-danger mr-1 fa-beat"></i> Listening... Kripya Roll Number bolein (e.g., 202401)', 'listening');
+        };
+
+        recognition.onresult = function (event) {
+            var transcript = event.results[0][0].transcript;
+            var numbersOnly = parseSpokenNumbers(transcript);
+
+            if (numbersOnly && numbersOnly.length > 0) {
+                inputRoll.value = numbersOnly;
+                showStatus('<i class="fas fa-check-circle mr-1"></i> Number: <b>' + numbersOnly + '</b>', 'success');
+                hideStatus(1500);
+            } else {
+                showStatus('<i class="fas fa-exclamation-triangle mr-1"></i> "' + transcript + '" sunai diya. Kripya number bolein.', 'warn');
+                hideStatus(2000);
+            }
+        };
+
+        recognition.onerror = function (event) {
+            isListening = false;
+            resetMicUi();
+            if (event.error === 'not-allowed') {
+                showStatus('<i class="fas fa-times-circle mr-1"></i> Microphone access blocked hai. Browser me Mic allow karein.', 'warn');
+                hideStatus(4000);
+            } else if (event.error === 'no-speech') {
+                if (statusMsg) {
+                    statusMsg.style.display = 'none';
+                    statusMsg.innerHTML = '';
+                }
+            } else {
+                showStatus('Error: ' + event.error, 'warn');
+                hideStatus(3000);
+            }
+        };
+
+        recognition.onend = function () {
+            isListening = false;
+            resetMicUi();
+        };
+
+        function resetMicUi() {
+            micBtn.classList.remove('btn-mic-pulse');
+            micIcon.classList.remove('fa-microphone-alt');
+            micIcon.classList.add('fa-microphone');
+            inputRoll.placeholder = "Enter Roll No.";
+
+            // Mic band hone par "Listening... Kripya Roll Number bolein" message turant hata dein
+            if (statusMsg && statusMsg.innerHTML.indexOf('Listening') !== -1) {
+                statusMsg.style.display = 'none';
+                statusMsg.innerHTML = '';
+            }
+        }
+    })();
 </script>
+
 <style>
-
-
     .search {
         width: 100%;
         position: relative;
@@ -152,5 +338,4 @@
         cursor: pointer;
         font-size: 20px;
     }
-
-</style>    
+</style>
