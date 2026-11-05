@@ -1,4 +1,4 @@
-﻿@using System.Security.Claims
+@using System.Security.Claims
 @model MVVU_RESULT_MODEL.DTO.StudentList_Admin
 @{
     var stud = Model.ResultViewed;
@@ -65,8 +65,29 @@
                     </div>
                     <div class="card">
                         <form style="margin:0px" id="formIndex" method="post">
+                            <input id="CommandNameSrh" name="CommandNameSrh" value="" hidden />
                             <div class="card-header">
-                                <input id="CommandNameSrh" name="CommandNameSrh" value="" hidden />
+                                <h3 class="card-title font-weight-bold">
+                                    <i class="fas fa-list-alt text-primary mr-1"></i> Result Viewed Summary
+                                    @if (stud != null && stud.Count() > 0)
+                                    {
+                                        <span class="badge badge-primary ml-1" id="recordCountBadge">@stud.Count() Records</span>
+                                    }
+                                </h3>
+
+                                <div class="card-tools">
+                                    <div class="input-group input-group-sm" style="width: 300px;">
+                                        <input type="text" id="tableSearch" name="tableSearch" class="form-control float-right" placeholder="Search in table..." autocomplete="off">
+                                        <div class="input-group-append">
+                                            <button type="button" class="btn btn-default" id="btnClearSearch" title="Clear Search" style="display:none;">
+                                                <i class="fas fa-times text-muted"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-default" id="btnSearchIcon" title="Search">
+                                                <i class="fas fa-search"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </form>
                         <!-- /.card-header -->
@@ -93,6 +114,12 @@
                                 </thead>
 
                                 <tbody>
+                                    <tr id="noMatchingRow" style="display:none;">
+                                        <td colspan="9" class="text-center text-muted py-4">
+                                            <i class="fas fa-search fa-2x mb-2 d-block text-secondary"></i>
+                                            <span>No matching records found for "<b id="searchedTermText"></b>"</span>
+                                        </td>
+                                    </tr>
                                     @if (stud != null)
                                     {
                                         if (stud.Count() > 0)
@@ -103,7 +130,7 @@
                                                 
                                                 var rang = item.IsTestingActive == true ? "text-warning" : "";
                                                 
-                                                <tr style="font-size:13px" class="@rang">
+                                                <tr style="font-size:13px" class="@rang searchable-row">
 
                                                     <td>
                                                         @i
@@ -394,6 +421,77 @@
         }
 
     }
-</script>
 
-    
+    // ==========================================
+    // Real-Time Client-Side Table Search Filter
+    // ==========================================
+    $(document).ready(function () {
+        var $searchInput = $('#tableSearch');
+        var $clearBtn = $('#btnClearSearch');
+        var $tableRows = $('#papertable tbody tr.searchable-row');
+        var $noMatchingRow = $('#noMatchingRow');
+        var totalCount = $tableRows.length;
+
+        $searchInput.on('keyup input paste', function (e) {
+            if (e.keyCode === 13) {
+                e.preventDefault();
+            }
+
+            var query = $(this).val().toLowerCase().trim();
+
+            if (query.length > 0) {
+                $clearBtn.show();
+            } else {
+                $clearBtn.hide();
+            }
+
+            var visibleCount = 0;
+            var searchTerms = query.split(/\s+/).filter(function (term) {
+                return term.length > 0;
+            });
+
+            if (searchTerms.length === 0) {
+                $tableRows.show();
+                $noMatchingRow.hide();
+                $('#recordCountBadge').text(totalCount + ' Records');
+                return;
+            }
+
+            $tableRows.each(function () {
+                var rowText = $(this).text().toLowerCase();
+                var matchesAll = true;
+
+                for (var i = 0; i < searchTerms.length; i++) {
+                    if (rowText.indexOf(searchTerms[i]) === -1) {
+                        matchesAll = false;
+                        break;
+                    }
+                }
+
+                if (matchesAll) {
+                    $(this).show();
+                    visibleCount++;
+                } else {
+                    $(this).hide();
+                }
+            });
+
+            if (visibleCount === 0) {
+                $('#searchedTermText').text(query);
+                $noMatchingRow.show();
+                $('#recordCountBadge').text('0 of ' + totalCount + ' Found');
+            } else {
+                $noMatchingRow.hide();
+                $('#recordCountBadge').text(visibleCount + ' of ' + totalCount + ' Found');
+            }
+        });
+
+        $clearBtn.on('click', function () {
+            $searchInput.val('').trigger('input').focus();
+        });
+
+        $('#btnSearchIcon').on('click', function () {
+            $searchInput.focus();
+        });
+    });
+</script>
