@@ -848,6 +848,7 @@ namespace MVVU_RESULT_UI.Areas.Admin.Controllers
         //[HttpPost]
         public async Task<IActionResult> StudentList(string SessionName = "", string CourseType = "", bool IsPG = false, int CourseId = 0, string ExamTypeName = "", string CommandNameSrh = null, string RollN = "", int IsLiveStatus = 2, int Page = 1, int IS_PUBLISHED = 3, string ResultStatus = "", string CCODE = "")
         {
+            StudentList_Admin data = new StudentList_Admin();
             try
             {
                 bool IsAdmin = false;
@@ -855,7 +856,6 @@ namespace MVVU_RESULT_UI.Areas.Admin.Controllers
                 {
                     IsAdmin = true;
                 }
-                StudentList_Admin data = new StudentList_Admin();
                 data = await UOF.IAdminMaster.StudentManageData("", CourseType, IsPG, SessionName, CourseId, CCODE);
 
                 // data.ExamTypeList = await UOF.IAdminMaster.GetExamTypeList_ADMIN("ExamTypeList", CourseId);

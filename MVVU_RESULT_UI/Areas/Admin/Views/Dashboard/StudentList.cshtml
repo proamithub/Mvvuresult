@@ -377,12 +377,13 @@
                             <!-- /.card-body -->
                             <div class="card-footer clearfix">
 
-                                @if (Model?.PagingList != null && Model.PagingList.PageSize > 0 && Model.PagingList.RecordCount > 0)
-                                {
-                                    var totalPages = (int)Math.Ceiling(Decimal.Divide(Model.PagingList.RecordCount, Model.PagingList.PageSize));
+                                @{
+                                    var pageSize = Model?.PagingList?.PageSize > 0 ? Model.PagingList.PageSize : 20;
+                                    var recordCount = Model?.PagingList?.RecordCount ?? 0;
+                                    var totalPages = (int)Math.Ceiling(Decimal.Divide(recordCount, pageSize));
                                     var firstPage = 1;
                                     var lastPage = totalPages;
-                                    var currentpage = Model.PagingList.PageCurrent;
+                                    var currentpage = Model?.PagingList?.PageCurrent ?? 1;
 
                                     int maxPagesToShow = 5;
                                     int halfRange = maxPagesToShow / 2;
@@ -412,33 +413,35 @@
                                     }
 
                                 }
+                                @if (totalPages > 0 && recordCount > 0)
+                                {
                                 <ul class="pagination pagination-sm m-0 float-right">
-                                    @if (Model.PagingList.PageCurrent > 1)
+                                    @if (currentpage > 1)
                                     {
                                         <li class="page-item">
                                             <a class="page-link" onclick="pagechange(1)">First</a>
                                         </li>
                                         <li class="page-item">
-                                            <a class="page-link" onclick="pagechange(@currentpage - 1)">« Prev</a>
+                                            <a class="page-link" onclick="pagechange(@(currentpage - 1))">Â« Prev</a>
                                         </li>
                                     }
 
                                     <!-- Page Number Buttons (only 5 visible) -->
                                     @for (int i = firstPage; i <= lastPage; i++)
                                     {
-                                        <li class="page-item @(i == Model.PagingList.PageCurrent ? "active" : "")">
+                                        <li class="page-item @(i == currentpage ? "active" : "")">
                                             <a class="page-link" onclick="pagechange(@i)">@i</a>
                                         </li>
                                     }
 
                                     <!-- Next Button -->
-                                    @if (Model.PagingList.PageCurrent < totalPages)
+                                    @if (currentpage < totalPages)
                                     {
                                         <li class="page-item">
-                                            <a class="page-link" onclick="pagechange(@currentpage + 1)">Next »</a>
+                                            <a class="page-link" onclick="pagechange(@(currentpage + 1))">Next Â»</a>
                                         </li>
                                     }
-                                    @if (Model.PagingList.PageCurrent < totalPages)
+                                    @if (currentpage < totalPages)
                                     {
                                         <li class="page-item">
                                             <a class="page-link" onclick="pagechange(@totalPages)">Last</a>
@@ -446,6 +449,7 @@
                                     }
                                 </ul>
                                 }
+
                             </div>
                         </div>
                     </form>
