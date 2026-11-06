@@ -15,6 +15,8 @@ using System.Text.Json.Serialization;
 //using Rotativa.AspNetCore;
 using Microsoft.AspNetCore.Http.Features;
 using MVVU_RESULT_DATA.Dapper;
+using Microsoft.AspNetCore.ResponseCompression;
+using System.IO.Compression;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,6 +29,34 @@ builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 //builder.Services.AddSingleton(Log.Logger);
 
 builder.Services.AddDistributedMemoryCache();
+
+builder.Services.AddResponseCompression(options =>
+{
+    options.EnableForHttps = true;
+    options.Providers.Add<BrotliCompressionProvider>();
+    options.Providers.Add<GzipCompressionProvider>();
+    options.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(new[]
+    {
+        "text/plain",
+        "text/html",
+        "text/css",
+        "text/javascript",
+        "application/javascript",
+        "application/json",
+        "application/xml",
+        "image/svg+xml"
+    });
+});
+
+builder.Services.Configure<BrotliCompressionProviderOptions>(options =>
+{
+    options.Level = CompressionLevel.Fastest;
+});
+
+builder.Services.Configure<GzipCompressionProviderOptions>(options =>
+{
+    options.Level = CompressionLevel.Fastest;
+});
 
 builder.Services.AddSession(options =>
 {
@@ -150,7 +180,25 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseStaticFiles();
+// Response Compression should be called before UseStaticFiles
+app.UseResponseCompression();
+
+if (!app.Environment.IsDevelopment())
+{
+    // Static file caching (7 days for CSS, JS, images, fonts in production)
+    app.UseStaticFiles(new StaticFileOptions
+    {
+        OnPrepareResponse = ctx =>
+        {
+            const int durationInSeconds = 60 * 60 * 24 * 7; // 7 days
+            ctx.Context.Response.Headers["Cache-Control"] = $"public,max-age={durationInSeconds}";
+        }
+    });
+}
+else
+{
+    app.UseStaticFiles();
+}
 
 app.UseSession();
 app.UseCookiePolicy();

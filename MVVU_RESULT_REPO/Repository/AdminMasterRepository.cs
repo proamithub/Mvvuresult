@@ -1,4 +1,4 @@
-﻿using Dapper;
+using Dapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Configuration;
@@ -59,7 +59,7 @@ namespace MVVU_RESULT_REPO
 
                 AdminMaster? admin = new AdminMaster();
                 await using var con = new SqlConnection(_connectionStringResult);
-                con.Open();
+                await con.OpenAsync();
                 string _pass = AESEncription.Base64Encode(password);
                 var paramList = new
                 {
@@ -124,7 +124,7 @@ namespace MVVU_RESULT_REPO
         {
             var list = new List<SessionDTO>();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -141,7 +141,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -151,7 +151,7 @@ namespace MVVU_RESULT_REPO
             FormResponse list = new();
             // var list = new StudentMasterDTO();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -172,7 +172,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -182,7 +182,7 @@ namespace MVVU_RESULT_REPO
 
             COURSE_MASTER_AM_DTO_DASH d = new();
             await using var con = new SqlConnection(_connectionString);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -211,7 +211,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return d;
 
@@ -221,7 +221,7 @@ namespace MVVU_RESULT_REPO
 
             MANAGE_COURSE_MASTER_AM_DTO d = new();
             await using var con = new SqlConnection(_connectionString);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -251,7 +251,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return d;
 
@@ -262,7 +262,7 @@ namespace MVVU_RESULT_REPO
             FormResponse list = new();
             // var list = new StudentMasterDTO();
             await using var con = new SqlConnection(_connectionString);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -292,7 +292,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -301,7 +301,7 @@ namespace MVVU_RESULT_REPO
             FormResponse list = new();
             // var list = new StudentMasterDTO();
             await using var con = new SqlConnection(_connectionString);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -332,7 +332,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -344,7 +344,7 @@ namespace MVVU_RESULT_REPO
 
             PAPER_MASTER_AM_DTO_DASH d = new();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -373,7 +373,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return d;
 
@@ -383,7 +383,7 @@ namespace MVVU_RESULT_REPO
 
             MANAGE_PAPER_MASTER_AM_DTO d = new();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -405,7 +405,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return d;
         }
@@ -414,7 +414,7 @@ namespace MVVU_RESULT_REPO
 
             MANAGE_PAPER_MASTER_AM_DTO d = new();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -439,7 +439,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return d;
         }
@@ -448,7 +448,7 @@ namespace MVVU_RESULT_REPO
 
             MANAGE_COURSE_MASTER_AM_DTO d = new();
             await using var con = new SqlConnection(_connectionString);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -480,7 +480,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return d;
         }
@@ -490,7 +490,7 @@ namespace MVVU_RESULT_REPO
 
             MANAGE_ORDINANCE_MASTER_AM_DTO d = new();
             await using var con = new SqlConnection(_connectionString);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -521,7 +521,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return d;
         }
@@ -530,7 +530,7 @@ namespace MVVU_RESULT_REPO
 
             ORDINANCE_DETAILS_AM_DTO d = new();
             await using var con = new SqlConnection(_connectionString);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -556,7 +556,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return d;
         }
@@ -567,7 +567,7 @@ namespace MVVU_RESULT_REPO
 
             List<PAPER_TYPE_CATEGORY_AM_DTO> d = new List<PAPER_TYPE_CATEGORY_AM_DTO>();
             await using var con = new SqlConnection(_connectionString);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -589,7 +589,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return d;
         }
@@ -600,7 +600,7 @@ namespace MVVU_RESULT_REPO
             FormResponse list = new();
             // var list = new StudentMasterDTO();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -638,7 +638,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -647,7 +647,7 @@ namespace MVVU_RESULT_REPO
             FormResponse list = new();
             // var list = new StudentMasterDTO();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -685,7 +685,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -694,7 +694,7 @@ namespace MVVU_RESULT_REPO
             FormResponse list = new();
             // var list = new StudentMasterDTO();
             await using var con = new SqlConnection(_connectionString);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -768,7 +768,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -777,7 +777,7 @@ namespace MVVU_RESULT_REPO
             FormResponse list = new();
             // var list = new StudentMasterDTO();
             await using var con = new SqlConnection(_connectionString);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -797,7 +797,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -808,7 +808,7 @@ namespace MVVU_RESULT_REPO
 
             ORDINANCE_MASTER_AM_DTO_DASH d = new();
             await using var con = new SqlConnection(_connectionString);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -837,7 +837,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return d;
 
@@ -847,7 +847,7 @@ namespace MVVU_RESULT_REPO
 
             MANAGE_ORDINANCE_MASTER_AM_DTO d = new();
             await using var con = new SqlConnection(_connectionString);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -875,7 +875,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return d;
         }
@@ -884,7 +884,7 @@ namespace MVVU_RESULT_REPO
 
             ORDINANCE_DETAILS_AM_DTO_DASH d = new();
             await using var con = new SqlConnection(_connectionString);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -913,7 +913,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return d;
 
@@ -923,7 +923,7 @@ namespace MVVU_RESULT_REPO
 
             MANAGE_ORDINANCE_DETAILS_AM_DTO d = new();
             await using var con = new SqlConnection(_connectionString);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -950,7 +950,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return d;
 
@@ -960,7 +960,7 @@ namespace MVVU_RESULT_REPO
             FormResponse list = new();
             // var list = new StudentMasterDTO();
             await using var con = new SqlConnection(_connectionString);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -998,7 +998,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -1009,7 +1009,7 @@ namespace MVVU_RESULT_REPO
             FormResponse list = new();
             // var list = new StudentMasterDTO();
             await using var con = new SqlConnection(_connectionString);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -1048,7 +1048,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -1058,7 +1058,7 @@ namespace MVVU_RESULT_REPO
 
             ORDINANCE_APPLY_AM_DTO_DASH d = new();
             await using var con = new SqlConnection(_connectionString);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -1088,7 +1088,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return d;
         }
@@ -1099,7 +1099,7 @@ namespace MVVU_RESULT_REPO
             FormResponse list = new();
             // var list = new StudentMasterDTO();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -1124,7 +1124,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -1133,7 +1133,7 @@ namespace MVVU_RESULT_REPO
             FormResponse list = new();
             // var list = new StudentMasterDTO();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -1158,7 +1158,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -1168,7 +1168,7 @@ namespace MVVU_RESULT_REPO
 
             ORDINANCE_MAPPING_AM_DTO_DASH d = new();
             await using var con = new SqlConnection(_connectionString);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -1196,7 +1196,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return d;
 
@@ -1206,7 +1206,7 @@ namespace MVVU_RESULT_REPO
 
             MANAGE_ORDINANCE_MAPPING_AM_DTO d = new();
             await using var con = new SqlConnection(_connectionString);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -1236,7 +1236,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return d;
 
@@ -1246,7 +1246,7 @@ namespace MVVU_RESULT_REPO
             FormResponse list = new();
             // var list = new StudentMasterDTO();
             await using var con = new SqlConnection(_connectionString);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -1268,7 +1268,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -1276,7 +1276,7 @@ namespace MVVU_RESULT_REPO
         {
             MANAGE_ORDINANCE_STUDENT_MAPPING_AM_DTO d = new();
             await using var con = new SqlConnection(_connectionString);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -1310,7 +1310,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return d;
         }
@@ -1319,7 +1319,7 @@ namespace MVVU_RESULT_REPO
             FormResponse list = new();
             // var list = new StudentMasterDTO();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -1343,7 +1343,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -1352,7 +1352,7 @@ namespace MVVU_RESULT_REPO
             FormResponse list = new();
             // var list = new StudentMasterDTO();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -1376,7 +1376,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -1386,7 +1386,7 @@ namespace MVVU_RESULT_REPO
         {
             ResultDTO_DASH d = new();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -1419,7 +1419,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return d;
         }
@@ -1429,7 +1429,7 @@ namespace MVVU_RESULT_REPO
             List<CourseMasterDTO_AM> list = new();
             // var list = new StudentMasterDTO();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -1449,7 +1449,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -1457,7 +1457,7 @@ namespace MVVU_RESULT_REPO
         {
             var list = new List<TemplateRules_AM>();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -1474,7 +1474,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -1482,7 +1482,7 @@ namespace MVVU_RESULT_REPO
         {
             var list = new List<CourseMasterDTO_AM>();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -1499,7 +1499,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -1508,7 +1508,7 @@ namespace MVVU_RESULT_REPO
         {
             FormResponse list = new();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -1545,7 +1545,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -1553,7 +1553,7 @@ namespace MVVU_RESULT_REPO
         {
             FormResponse list = new();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -1590,7 +1590,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -1600,7 +1600,7 @@ namespace MVVU_RESULT_REPO
 
             var list = new CourseMasterDTO_AM();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -1628,7 +1628,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -1637,7 +1637,7 @@ namespace MVVU_RESULT_REPO
 
             List<StudentMasterDTO> list = new();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -1662,7 +1662,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
 
@@ -1673,7 +1673,7 @@ namespace MVVU_RESULT_REPO
 
             List<STUDENT_MARKS_AMDTO> list = new();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -1702,7 +1702,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
 
@@ -1712,7 +1712,7 @@ namespace MVVU_RESULT_REPO
             StudentMasterDTO list = new();
             // var list = new StudentMasterDTO();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -1758,7 +1758,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -1767,7 +1767,7 @@ namespace MVVU_RESULT_REPO
             StudentMasterDTO list = new();
             // var list = new StudentMasterDTO();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -1793,7 +1793,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -1804,7 +1804,7 @@ namespace MVVU_RESULT_REPO
             StudentList_Admin list = new();
             // var list = new StudentMasterDTO();
             await using var con = new SqlConnection(_connectionString);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -1841,7 +1841,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -1849,36 +1849,48 @@ namespace MVVU_RESULT_REPO
         public async Task<StudentList_Admin> StudentList_AM(string Flag, string SessionName, string CourseType, bool IsPG, int CourseId, string ExamTypeName, string RollN, int IsLiveStatus, bool IsAdmin,int Page = 1,int IS_PUBLISHED=0,string ResultStatus="",string CCODE="")
         {
 
-            StudentList_Admin list = new();
+            StudentList_Admin list = new()
+            {
+                StudentList = new List<StudentMasterDTO>(),
+                PagingList = new PagingDTO()
+            };
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
-                var paramList = new
+                try
                 {
-                    Flag = Flag,
-                    SessionName = SessionName,
-                    CourseType = CourseType,
+                    await con.ExecuteAsync("IF OBJECT_ID('dbo.pagetemp1', 'U') IS NOT NULL DROP TABLE dbo.pagetemp1;");
+                }
+                catch { }
 
-                    CourseId = CourseId,
-                    ExamTypeName = ExamTypeName,
-                    RollNumber = RollN,
-                    IsLiveStatus = IsLiveStatus,
-                    IS_PUBLISHED= IS_PUBLISHED,
-                    IsAdmin = IsAdmin,
-                    PageNumber= Page,
-                    ResultStatus= ResultStatus,
-                    CCODE = CCODE
-                };
-                var multi = await con.QueryMultipleAsync("StudentList_Admin_AM", paramList, commandTimeout: 0,
-              commandType: CommandType.StoredProcedure);
+                var parametersInDb = (await con.QueryAsync<string>(
+                    "SELECT PARAMETER_NAME FROM INFORMATION_SCHEMA.PARAMETERS WHERE SPECIFIC_NAME = 'StudentList_Admin_AM'"
+                )).Select(p => p.TrimStart('@')).ToHashSet(StringComparer.OrdinalIgnoreCase);
+
+                var dynParams = new DynamicParameters();
+                dynParams.Add("@Flag", Flag);
+                dynParams.Add("@SessionName", SessionName);
+                dynParams.Add("@CourseType", CourseType ?? "");
+                dynParams.Add("@CourseId", CourseId);
+                dynParams.Add("@ExamTypeName", ExamTypeName ?? "");
+                dynParams.Add("@RollNumber", string.IsNullOrWhiteSpace(RollN) ? null : RollN.Trim());
+                dynParams.Add("@IsLiveStatus", IsLiveStatus);
+                dynParams.Add("@IsAdmin", IsAdmin ? "1" : null);
+                dynParams.Add("@PageNumber", Page <= 0 ? 1 : Page);
+
+                if (parametersInDb.Contains("IS_PUBLISHED")) dynParams.Add("@IS_PUBLISHED", IS_PUBLISHED);
+                if (parametersInDb.Contains("ResultStatus")) dynParams.Add("@ResultStatus", ResultStatus ?? "");
+                if (parametersInDb.Contains("CCODE")) dynParams.Add("@CCODE", CCODE ?? "");
+
+                var multi = await con.QueryMultipleAsync("StudentList_Admin_AM", dynParams, commandTimeout: 0,
+                    commandType: CommandType.StoredProcedure);
 
                 var lst1 = await multi.ReadAsync<PagingDTO>();
                 var lst2 = await multi.ReadAsync<StudentMasterDTO>();
 
-                list.StudentList = lst2.ToList();
-                list.PagingList = lst1.ToList()[0];
-
+                list.PagingList = lst1?.FirstOrDefault() ?? new PagingDTO();
+                list.StudentList = lst2?.ToList() ?? new List<StudentMasterDTO>();
 
             }
             catch (Exception e)
@@ -1887,7 +1899,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
 
@@ -1895,9 +1907,13 @@ namespace MVVU_RESULT_REPO
         public async Task<StudentList_Admin> StudentListView_AM(string Flag, string SessionName, int CourseId, int Page = 1)
         {
 
-            StudentList_Admin list = new();
+            StudentList_Admin list = new()
+            {
+                StudentList = new List<StudentMasterDTO>(),
+                PagingList = new PagingDTO()
+            };
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -1913,8 +1929,8 @@ namespace MVVU_RESULT_REPO
                 var lst1 = await multi.ReadAsync<PagingDTO>();
                 var lst2 = await multi.ReadAsync<StudentMasterDTO>();
 
-                list.StudentList = lst2.ToList();
-                list.PagingList = lst1.ToList()[0];
+                list.PagingList = lst1?.FirstOrDefault() ?? new PagingDTO();
+                list.StudentList = lst2?.ToList() ?? new List<StudentMasterDTO>();
 
 
             }
@@ -1924,7 +1940,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
 
@@ -1934,7 +1950,7 @@ namespace MVVU_RESULT_REPO
         {
             FormResponse list = new();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -1957,7 +1973,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -1965,7 +1981,7 @@ namespace MVVU_RESULT_REPO
         {
             MANAGE_STUDENT_DEMO_TO_ERP_DTO d = new();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -1997,7 +2013,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return d;
         }
@@ -2005,7 +2021,7 @@ namespace MVVU_RESULT_REPO
         {
             FormResponse list = new();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -2047,7 +2063,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -2056,7 +2072,7 @@ namespace MVVU_RESULT_REPO
         {
             STUDENT_DATA_DASH_AM d = new();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -2085,7 +2101,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return d;
         }
@@ -2093,7 +2109,7 @@ namespace MVVU_RESULT_REPO
         {
             FormResponse list = new();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -2112,7 +2128,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -2122,7 +2138,7 @@ namespace MVVU_RESULT_REPO
         {
             var list = new List<ResultViewedDTO>();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -2139,7 +2155,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -2149,7 +2165,7 @@ namespace MVVU_RESULT_REPO
         {
             FormResponse list = new();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -2168,7 +2184,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -2176,7 +2192,7 @@ namespace MVVU_RESULT_REPO
         {
             FormResponse list = new();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -2195,7 +2211,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -2205,7 +2221,7 @@ namespace MVVU_RESULT_REPO
 
             DataTable dt = new DataTable();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -2225,7 +2241,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return dt;
         }
@@ -2233,7 +2249,7 @@ namespace MVVU_RESULT_REPO
         {
             FormResponse list = new();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -2252,7 +2268,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -2260,7 +2276,7 @@ namespace MVVU_RESULT_REPO
         {
             FormResponse list = new();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -2284,7 +2300,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -2292,7 +2308,7 @@ namespace MVVU_RESULT_REPO
         {
             FormResponse list = new();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -2322,7 +2338,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -2330,7 +2346,7 @@ namespace MVVU_RESULT_REPO
         {
             FormResponse list = new();
             await using var con = new SqlConnection(_connectionStringResult);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -2350,7 +2366,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return list;
         }
@@ -2360,7 +2376,7 @@ namespace MVVU_RESULT_REPO
 
             DataTable dt = new DataTable();
             await using var con = new SqlConnection(_connectionStringExam);
-            con.Open();
+            await con.OpenAsync();
             try
             {
                 var paramList = new
@@ -2386,7 +2402,7 @@ namespace MVVU_RESULT_REPO
             }
             finally
             {
-                con.Close();
+                await con.CloseAsync();
             }
             return dt;
         }

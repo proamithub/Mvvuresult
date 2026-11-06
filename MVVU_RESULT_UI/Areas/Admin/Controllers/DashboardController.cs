@@ -1,4 +1,4 @@
-﻿using Castle.Core.Internal;
+using Castle.Core.Internal;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http;
@@ -863,10 +863,19 @@ namespace MVVU_RESULT_UI.Areas.Admin.Controllers
                 data.PagingList = new PagingDTO();
                 if (CommandNameSrh == "Search")
                 {
-                    StudentList_Admin data1 = new StudentList_Admin();
-                    data1 = await UOF.IAdminMaster.StudentList_AM("", SessionName, CourseType, IsPG, CourseId, ExamTypeName, RollN, IsLiveStatus, IsAdmin, Page, IS_PUBLISHED, ResultStatus, CCODE);
-                    data.StudentList = data1.StudentList;
-                    data.PagingList = data1.PagingList;
+                    try
+                    {
+                        StudentList_Admin data1 = await UOF.IAdminMaster.StudentList_AM("", SessionName, CourseType, IsPG, CourseId, ExamTypeName, RollN, IsLiveStatus, IsAdmin, Page, IS_PUBLISHED, ResultStatus, CCODE);
+                        if (data1 != null)
+                        {
+                            data.StudentList = data1.StudentList ?? new List<StudentMasterDTO>();
+                            data.PagingList = data1.PagingList ?? new PagingDTO();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Log.Error(ex, "StudentList Search error: {Message}", ex.Message);
+                    }
                 }
                 data.CourseType = CourseType;
                 data.CourseID = CourseId;
@@ -882,9 +891,27 @@ namespace MVVU_RESULT_UI.Areas.Admin.Controllers
             }
             catch (Exception e)
             {
-
+                Log.Error(e, "StudentList outer error: {Message}", e.Message);
             }
-            return View();
+            if (data == null)
+            {
+                data = new StudentList_Admin
+                {
+                    StudentList = new List<StudentMasterDTO>(),
+                    PagingList = new PagingDTO(),
+                    CourseTypeList = new List<CourseMasterDTO_AM>(),
+                    CourseList = new List<CourseMasterDTO_AM>(),
+                    SessionList = new List<SESSION_MASTER_DTO>(),
+                    ExamTypeList = new List<EXAM_TYPE_MASTER_DTO>(),
+                    ResultTypeStatusFilter = new List<ResultTypeStatus>()
+                };
+            }
+            else
+            {
+                data.StudentList ??= new List<StudentMasterDTO>();
+                data.PagingList ??= new PagingDTO();
+            }
+            return View(data);
         }
 
         [HttpPost]
